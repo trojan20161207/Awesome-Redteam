@@ -37,6 +37,7 @@
     - [扫描/爆破](#扫描爆破)
       - [扫描/爆破工具](#扫描爆破工具)
       - [扫描/爆破字典](#扫描爆破字典)
+      - [默认口令查询](#默认口令查询)
     - [信息泄露](#信息泄露)
     - [社会工程学](#社会工程学)
     - [综合工具](#综合工具)
@@ -58,6 +59,7 @@
     - [CMS / OA](#cms--oa)
     - [Payload / Bypass](#payload--bypass)
   - [内网渗透工具](#内网渗透工具)
+    - [内网探测](#内网探测)
     - [权限维持](#权限维持)
     - [免杀项目](#免杀项目)
     - [内网穿透](#内网穿透)
@@ -89,10 +91,11 @@
 - 攻防渗透常用命令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E6%94%BB%E9%98%B2%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
 - 常见WAF拦截页面速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%B8%B8%E8%A7%81WAF%E6%8B%A6%E6%88%AA%E9%A1%B5%E9%9D%A2%E9%80%9F%E6%9F%A5.md)
 - 反弹shell命令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%8F%8D%E5%BC%B9shell%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
+- 默认口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/DefaultCreds-Cheat-Sheet.csv)
+- 主要安全产品及弱口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E4%B8%BB%E8%A6%81%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E5%8F%8A%E5%BC%B1%E5%8F%A3%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
 - 重要端口及服务速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5.md)
 - HTTP状态码速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E9%80%9F%E6%9F%A5.md)
 - 安全厂商及官网链接速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%AE%89%E5%85%A8%E5%8E%82%E5%95%86%E5%8F%8A%E5%AE%98%E7%BD%91%E9%93%BE%E6%8E%A5%E9%80%9F%E6%9F%A5.txt)
-- 主要安全产品及弱口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E4%B8%BB%E8%A6%81%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E5%8F%8A%E5%BC%B1%E5%8F%A3%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
 - Apache项目及漏洞指纹速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/Apache%E9%A1%B9%E7%9B%AE%E5%8F%8A%E6%BC%8F%E6%B4%9E%E6%8C%87%E7%BA%B9%E9%80%9F%E6%9F%A5.md) 
 - OWASP TOP10 2017/2021：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/OWASP%20TOP10.md) 
 
@@ -167,7 +170,11 @@
 - 安恒威胁情报：https://ti.dbappsecurity.com.cn/
 - 火线安全平台：https://www.huoxian.cn
 - 知道创宇漏洞平台：https://www.seebug.org/
+- 知道创宇黑客新闻流：https://hackernews.cc/
 - Hacking8安全信息流：https://i.hacking8.com/
+- SecWiki安全信息流：https://www.sec-wiki.com/
+- 网络安全威胁信息共享平台：https://share.anva.org.cn/web/publicity/listPhishing
+- 国家互联网应急中心：https://www.cert.org.cn/
 
 ### 网络空间搜索
 
@@ -260,6 +267,7 @@
 - dirmap：目录扫描/爆破 https://github.com/H4ckForJob/dirmap
 - ffuf：高速web fuzz工具 https://github.com/ffuf/ffuf
 - Arjun：HTTP参数扫描器 https://github.com/s0md3v/Arjun
+- URLFinder：JS与URL快速提取检测 https://github.com/pingc0y/URLFinder
 - ksubdomain：子域名爆破 https://github.com/knownsec/ksubdomain
 - Gobuster：URI/DNS/WEB爆破 https://github.com/OJ/gobuster
 - Hydra：弱密码爆破 https://github.com/vanhauser-thc/thc-hydra
@@ -267,6 +275,10 @@
 
 #### 扫描/爆破字典
 
+- 在线弱密码生成：https://weakpass.com/generate
+- 在线子域名生成：https://weakpass.com/generate/domains
+- Weakpass：在线弱密码生成工具部署 https://github.com/zzzteph/weakpass
+- Weakpass：在线子域名生成工具部署 https://github.com/zzzteph/probable_subdomains
 - Dictionary-Of-Pentesting：渗透测试、SRC漏洞挖掘、爆破、Fuzzing等常用字典 https://github.com/insightglacier/Dictionary-Of-Pentesting
 - fuzzDicts：Web渗透Fuzz字典 https://github.com/TheKingOfDuck/fuzzDicts
 - Web-Fuzzing-Box：Web 模糊测试字典与Payloads https://github.com/gh0stkey/Web-Fuzzing-Box
@@ -274,7 +286,22 @@
 - fuzz：https://github.com/Bo0oM/fuzz.txt
 - SuperWordlist：弱口令字典 https://github.com/fuzz-security/SuperWordlist
 - top25-parameter：top25参数字典 https://github.com/lutfumertceylan/top25-parameter
-- Weakpass：在线弱密码生成工具 https://github.com/zzzteph/weakpass
+
+#### 默认口令查询
+
+- Default Credentials Cheat Sheet：3468个默认密码 https://github.com/ihebski/DefaultCreds-cheat-sheet
+
+- datarecovery：在线默认口令查询 https://datarecovery.com/rd/default-passwords/
+
+- cirt.net：在线默认口令查询 https://cirt.net/passwords
+
+- 在线路由器密码查询：
+
+  -  https://www.routerpasswords.com/
+
+  - https://portforward.com/router-password/
+  - https://www.cleancss.com/router-default/
+  - https://www.toolmao.com/baiduapp/routerpwd/
 
 ### 信息泄露
 
@@ -425,6 +452,11 @@
 
 ## 内网渗透工具
 
+### 内网探测
+
+- netspy：快速探测内网可达网段 https://github.com/shmilylty/netspy
+- 
+
 ### 权限维持
 
 - Webshell收集项目：https://github.com/tennc/webshell
@@ -476,6 +508,7 @@
 
 ### 逆向分析
 
+- OpenArk：Anti-Rootkit（对抗恶意程序）工具集 https://github.com/BlackINT3/OpenArk
 - 逆向分析工具集：https://pythonarsenal.com/
 - PEiD：查壳工具 https://www.aldeid.com/wiki/PEiD
 - Py2exe：Python打包工具 https://www.py2exe.org/
@@ -550,6 +583,7 @@
 - Disable JavaScript：禁用JavaScript绕过弹窗 https://github.com/dpacassi/disable-javascript
 - Hack Bar：渗透神器No.1 https://github.com/0140454/hackbar
 - Heimdallr：被动监听的谷歌插件，用于高危指纹识别、蜜罐特征告警和拦截、机器特征对抗 https://github.com/graynjo/Heimdallr
+- immersive-translate：翻译插件 https://github.com/immersive-translate/immersive-translate/
 
 ## 其他优秀项目
 
@@ -559,6 +593,11 @@
 - cloudreve：私有云盘部署 https://github.com/cloudreve/Cloudreve
 
 ## 先mark待测试项目
+
+- tabby：https://github.com/wh1t3p1g/tabby
+- changeme：https://github.com/ztgrace/changeme
+- RouterSploit：https://github.com/threat9/routersploit
+- Adinfo：域内信息收集 https://github.com/lzzbb/Adinfo
 
 - JNDInjector：高度可定制化的JNDI和Java反序列化利用工具 https://github.com/rebeyond/JNDInjector
 - IDOR_detect_tool：SaaS-API越权漏洞检测系统 https://github.com/y1nglamore/IDOR_detect_tool
