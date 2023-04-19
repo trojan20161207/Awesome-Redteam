@@ -40,16 +40,18 @@
       - [默认口令查询](#默认口令查询)
     - [信息泄露](#信息泄露)
     - [社会工程学](#社会工程学)
+    - [浏览器](#浏览器)
     - [综合工具](#综合工具)
   - [漏洞研究](#漏洞研究)
     - [开源资源](#开源资源)
     - [靶机平台](#靶机平台)
-  - [漏洞利用工具](#漏洞利用工具)
+  - [漏洞利用](#漏洞利用)
     - [综合利用](#综合利用)
       - [POC](#poc)
       - [集成工具](#集成工具)
       - [辅助工具](#辅助工具)
     - [操作系统](#操作系统)
+    - [Druid](#druid)
     - [Shiro](#shiro)
     - [Struts](#struts)
     - [Springboot](#springboot)
@@ -58,18 +60,24 @@
     - [Vcenter](#vcenter)
     - [CMS / OA](#cms--oa)
     - [Payload / Bypass](#payload--bypass)
-  - [内网渗透工具](#内网渗透工具)
+  - [内网渗透](#内网渗透)
     - [内网探测](#内网探测)
     - [权限维持](#权限维持)
     - [免杀项目](#免杀项目)
     - [内网穿透](#内网穿透)
     - [密码提取](#密码提取)
     - [其他](#其他-1)
-  - [其他技术及工具](#其他技术及工具)
-    - [逆向分析](#逆向分析)
-    - [大数据 / 云存储](#大数据--云存储)
-    - [开源蜜罐](#开源蜜罐)
-    - [容器安全](#容器安全)
+  - [逆向分析](#逆向分析)
+    - [靶机平台](#靶机平台-1)
+    - [综合工具](#综合工具-1)
+    - [小程序](#小程序)
+    - [APK](#apk)
+  - [大数据 / 云存储](#大数据--云存储)
+    - [开源资源](#开源资源-1)
+    - [靶机平台](#靶机平台-2)
+    - [综合工具](#综合工具-2)
+  - [开源蜜罐](#开源蜜罐)
+  - [容器安全](#容器安全)
   - [必备工具](#必备工具)
     - [命令行](#命令行)
     - [Metasploit](#metasploit)
@@ -91,8 +99,7 @@
 - 攻防渗透常用命令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E6%94%BB%E9%98%B2%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
 - 常见WAF拦截页面速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%B8%B8%E8%A7%81WAF%E6%8B%A6%E6%88%AA%E9%A1%B5%E9%9D%A2%E9%80%9F%E6%9F%A5.md)
 - 反弹shell命令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%8F%8D%E5%BC%B9shell%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
-- 默认口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/DefaultCreds-Cheat-Sheet.csv)
-- 主要安全产品及弱口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E4%B8%BB%E8%A6%81%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E5%8F%8A%E5%BC%B1%E5%8F%A3%E4%BB%A4%E9%80%9F%E6%9F%A5.md)
+- 默认口令/弱口令速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/)
 - 重要端口及服务速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5.md)
 - HTTP状态码速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E9%80%9F%E6%9F%A5.md)
 - 安全厂商及官网链接速查：[Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E5%AE%89%E5%85%A8%E5%8E%82%E5%95%86%E5%8F%8A%E5%AE%98%E7%BD%91%E9%93%BE%E6%8E%A5%E9%80%9F%E6%9F%A5.txt)
@@ -249,6 +256,7 @@
 
 - Wapplyzer：Chrome插件 跨平台网站分析工具 https://github.com/AliasIO/Wappalyzer
 - TideFinger：提取了多个开源指纹识别工具的规则库并进行了规则重组 https://github.com/TideSec/TideFinger
+- EHole：红队重点攻击系统指纹探测工具 https://github.com/EdgeSecurityTeam/EHole
 - fingerprint：各种工具指纹收集分享 https://github.com/r0eXpeR/fingerprint
 - Dismap：tcp/udp/tls 协议指纹和 4500+ Web 指纹规则 https://github.com/zhzyker/dismap
 - Finger：一款红队在大量的资产中存活探测与重点攻击系统指纹探测工具 https://github.com/EASY233/Finger
@@ -284,24 +292,20 @@
 - Web-Fuzzing-Box：Web 模糊测试字典与Payloads https://github.com/gh0stkey/Web-Fuzzing-Box
 - PentesterSpecialDict：渗透测试工程师精简化字典 https://github.com/ppbibo/PentesterSpecialDict
 - fuzz：https://github.com/Bo0oM/fuzz.txt
-- SuperWordlist：弱口令字典 https://github.com/fuzz-security/SuperWordlist
 - top25-parameter：top25参数字典 https://github.com/lutfumertceylan/top25-parameter
 
 #### 默认口令查询
 
 - Default Credentials Cheat Sheet：3468个默认密码 https://github.com/ihebski/DefaultCreds-cheat-sheet
-
 - datarecovery：在线默认口令查询 https://datarecovery.com/rd/default-passwords/
-
 - cirt.net：在线默认口令查询 https://cirt.net/passwords
-
 - 在线路由器密码查询：
 
   -  https://www.routerpasswords.com/
-
   - https://portforward.com/router-password/
   - https://www.cleancss.com/router-default/
   - https://www.toolmao.com/baiduapp/routerpwd/
+  -  https://datarecovery.com/rd/default-passwords/
 
 ### 信息泄露
 
@@ -319,6 +323,10 @@
 - gophish：钓鱼邮件 https://github.com/gophish/gophish
 - SpoofWeb：一键部署HTTPS钓鱼网站 https://github.com/5icorgi/SpoofWeb
 
+### 浏览器
+
+- HackBrowserData：浏览器数据导出工具 https://github.com/moonD4rk/HackBrowserData
+
 ### 综合工具
 
 - AlliN：https://github.com/P1-Team/AlliN
@@ -327,13 +335,10 @@
 - ShuiZe：https://github.com/0x727/ShuiZe_0x727
 - Fofa Viewer：https://github.com/wgpsec/fofa_viewer
 - Fofa GUI：https://github.com/bewhale/FOFA_GUI
-
 - fscan：内网综合扫描工具 https://github.com/shadow1ng/fscan
 - hping3：端口扫描 高速 发包量少 结果准确无蜜罐 https://github.com/antirez/hping
-- EHole：红队重点攻击系统指纹探测工具 https://github.com/EdgeSecurityTeam/EHole
 - ENScan_GO：国内企业信息收集 https://github.com/wgpsec/ENScan_GO
 - Ladon：用于大型网络渗透的多线程插件化综合扫描工具 https://github.com/k8gege/Ladon
-- HackBrowserData：浏览器数据导出工具 https://github.com/moonD4rk/HackBrowserData
 
 ## 漏洞研究
 
@@ -359,7 +364,7 @@
 - Vulstudy：docker快速搭建共17个漏洞靶场 https://github.com/c0ny1/vulstudy
 - Vulfocus：漏洞集成平台 https://github.com/fofapro/vulfocus
 
-## 漏洞利用工具
+## 漏洞利用
 
 ### 综合利用
 
@@ -396,9 +401,16 @@
 ### 操作系统
 
 - Windows-Exploit-Suggester：https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+- Linux_Exploit_Suggester：https://github.com/The-Z-Labs/linux-exploit-suggester
 - Linux_Exploit_Suggester：https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
 - windows-kernel-exploits：提权漏洞集合 https://github.com/SecWiki/windows-kernel-exploits
 - Windows Elevation：https://github.com/Al1ex/WindowsElevation
+
+### Druid
+
+- DruidCrack：Druid密文解密工具 https://github.com/rabbitmask/DruidCrack
+
+- druid_sessions：Druid sessions利用工具 https://github.com/yuyan-sec/druid_sessions
 
 ### Shiro
 
@@ -428,6 +440,7 @@
 - WeblogicScan：https://github.com/dr0op/WeblogicScan
 - weblogicScanner：https://github.com/0xn0ne/weblogicScanner
 - weblogic-framework：https://github.com/sv3nbeast/weblogic-framework
+- 
 
 ### Vcenter
 
@@ -450,12 +463,11 @@
 - Gopherus：SSRF 生成gopher链接 https://github.com/tarunkant/Gopherus python2
 - CVE-2021-44228-PoC-log4j-bypass-words：https://github.com/Puliczek/CVE-2021-44228-PoC-log4j-bypass-words
 
-## 内网渗透工具
+## 内网渗透
 
 ### 内网探测
 
 - netspy：快速探测内网可达网段 https://github.com/shmilylty/netspy
-- 
 
 ### 权限维持
 
@@ -486,6 +498,8 @@
 - NPS：通过web端管理，无需配置文件 https://github.com/ehang-io/nps
 - FRP：55k star项目 https://github.com/fatedier/frp
 - Neo-reGeorg：tunnel快速部署 https://github.com/L-codes/Neo-reGeorg
+- Viper：图形化内网渗透 https://github.com/FunnyWolf/Viper
+- Stowaway：多级代理 https://github.com/ph4ntonn/Stowaway
 - Proxifier：windows代理工具 https://www.proxifier.com/
 - Proxychains：kali代理工具 https://github.com/haad/proxychains
 - iodine：dns隧道 https://github.com/yarrick/iodine
@@ -504,39 +518,52 @@
 - Impacket：其中的psexec.py通过用户名和密码远程连接到目标服务器 https://github.com/SecureAuthCorp/impacket
 - PsTools：PsExec.exe功能同Impacket中的psexec.py https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 
-## 其他技术及工具
+## 逆向分析
 
-### 逆向分析
+### 靶机平台
+
+- IoT-vulhub： IoT 版固件漏洞复现环境 https://github.com/firmianay/IoT-vulhub
+
+### 综合工具
 
 - OpenArk：Anti-Rootkit（对抗恶意程序）工具集 https://github.com/BlackINT3/OpenArk
 - 逆向分析工具集：https://pythonarsenal.com/
 - PEiD：查壳工具 https://www.aldeid.com/wiki/PEiD
 - Py2exe：Python打包工具 https://www.py2exe.org/
 - PyInstaller：Python打包工具 https://github.com/pyinstaller/pyinstaller
-- CrackMinApp：反编译微信小程序 https://github.com/Cherrison/CrackMinApp  
 - AppInfoScanner：移动端信息收集 https://github.com/kelvinBen/AppInfoScanner
+
+### 小程序
+
 - wxappUnpacker：小程序解包 https://github.com/xuedingmiaojun/wxappUnpacker
-- IoT-vulhub： IoT 版固件漏洞复现环境 https://github.com/firmianay/IoT-vulhub
+- CrackMinApp：反编译微信小程序 https://github.com/Cherrison/CrackMinApp  
+
+### APK
+
 - Apktool：Android apk逆向 https://github.com/iBotPeaches/Apktool
 
-### 大数据 / 云存储
+## 大数据 / 云存储
+
+### 开源资源
+
+- ATT&CK Cloud矩阵：https://attack.mitre.org/matrices/enterprise/cloud/
+
+### 靶机平台
 
 - AWSGoat：https://github.com/ine-labs/AWSGoat
 - TerraformGoat：https://github.com/HuoCorp/TerraformGoat
-- ATT&CK Cloud矩阵：https://attack.mitre.org/matrices/enterprise/cloud/
+
+### 综合工具
+
 - aliyun-accesskey-Tools：阿里云accesskey利用工具 https://github.com/mrknow001/aliyun-accesskey-Tools
 - cosbrowser：腾讯云COS客户端 https://github.com/TencentCloud/cosbrowser
 - 行云管家：云存储图形化管理平台 https://yun.cloudbility.com/
 
-- DruidCrack：Druid密文解密工具 https://github.com/rabbitmask/DruidCrack
-
-- druid_sessions：Druid sessions利用工具 https://github.com/yuyan-sec/druid_sessions
-
-### 开源蜜罐
+## 开源蜜罐
 
 - HFish：一款安全、简单可信赖的跨平台蜜罐软件，允许商业和个人用户免费使用 https://github.com/hacklcx/HFish
 
-### 容器安全
+## 容器安全
 
 - CDK：容器渗透 https://github.com/cdk-team/CDK
 - veinmind-tools：容器安全工具集 https://github.com/chaitin/veinmind-tools
@@ -545,8 +572,8 @@
 
 ### 命令行
 
-- oh my zsh：命令行工具集 好用 推荐 https://github.com/ohmyzsh/ohmyzsh
-- Platypus：反弹shell管理工具 好用 推荐 https://github.com/WangYihang/Platypus
+- oh my zsh：命令行工具集 https://github.com/ohmyzsh/ohmyzsh
+- Platypus：反弹shell管理  https://github.com/WangYihang/Platypus
 - tabby：高度可配置终端 https://github.com/Eugeny/tabby
 - anew：命令行工具 文件合并去重 https://github.com/tomnomnom/anew
 - The art of command line：快速掌握命令行 https://github.com/jlevy/the-art-of-command-line
@@ -554,7 +581,6 @@
 ### Metasploit
 
 - Metasploit：https://github.com/rapid7/metasploit-framework
-- https://attack.mitre.org/matrices/enterprise/cloud/
 
 ### Yakit
 
@@ -589,7 +615,6 @@
 
 - PySimpleGUI：https://github.com/PySimpleGUI/PySimpleGUI
 - f8x：红/蓝队环境自动化部署工具 https://github.com/ffffffff0x/f8x
-- mate-translate：一个翻译神器 https://gikken.co/mate-translate
 - cloudreve：私有云盘部署 https://github.com/cloudreve/Cloudreve
 
 ## 先mark待测试项目
