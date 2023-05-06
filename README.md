@@ -37,6 +37,7 @@
     - [扫描/爆破](#扫描爆破)
       - [扫描/爆破工具](#扫描爆破工具)
       - [扫描/爆破字典](#扫描爆破字典)
+      - [字典生成](#字典生成)
       - [默认口令查询](#默认口令查询)
     - [信息泄露](#信息泄露)
     - [社会工程学](#社会工程学)
@@ -280,19 +281,25 @@
 - Gobuster：URI/DNS/WEB爆破 https://github.com/OJ/gobuster
 - Hydra：弱密码爆破 https://github.com/vanhauser-thc/thc-hydra
 - John the Ripper：https://github.com/openwall/john
+- 403bypasser：403 绕过 https://github.com/yunemse48/403bypasser
+- byp4xx：403 绕过 https://github.com/lobuhi/byp4xx
 
 #### 扫描/爆破字典
 
-- 在线弱密码生成：https://weakpass.com/generate
-- 在线子域名生成：https://weakpass.com/generate/domains
-- Weakpass：在线弱密码生成工具部署 https://github.com/zzzteph/weakpass
-- Weakpass：在线子域名生成工具部署 https://github.com/zzzteph/probable_subdomains
 - Dictionary-Of-Pentesting：渗透测试、SRC漏洞挖掘、爆破、Fuzzing等常用字典 https://github.com/insightglacier/Dictionary-Of-Pentesting
 - fuzzDicts：Web渗透Fuzz字典 https://github.com/TheKingOfDuck/fuzzDicts
 - Web-Fuzzing-Box：Web 模糊测试字典与Payloads https://github.com/gh0stkey/Web-Fuzzing-Box
 - PentesterSpecialDict：渗透测试工程师精简化字典 https://github.com/ppbibo/PentesterSpecialDict
 - fuzz：https://github.com/Bo0oM/fuzz.txt
 - top25-parameter：top25参数字典 https://github.com/lutfumertceylan/top25-parameter
+
+#### 字典生成
+
+- 在线弱密码生成：https://weakpass.com/generate
+- 在线子域名生成：https://weakpass.com/generate/domains
+- Weakpass：在线弱密码生成工具部署 https://github.com/zzzteph/weakpass
+- Weakpass：在线子域名生成工具部署 https://github.com/zzzteph/probable_subdomains
+- pydictor：一个强大实用的黑客暴力破解字典建立工具 https://github.com/LandGrey/pydictor/
 
 #### 默认口令查询
 
