@@ -286,6 +286,7 @@
 
 #### 扫描/爆破字典
 
+- SecLists：46.4k star 项目 https://github.com/danielmiessler/SecLists
 - Dictionary-Of-Pentesting：渗透测试、SRC漏洞挖掘、爆破、Fuzzing等常用字典 https://github.com/insightglacier/Dictionary-Of-Pentesting
 - fuzzDicts：Web渗透Fuzz字典 https://github.com/TheKingOfDuck/fuzzDicts
 - Web-Fuzzing-Box：Web 模糊测试字典与Payloads https://github.com/gh0stkey/Web-Fuzzing-Box
@@ -444,10 +445,10 @@
 
 ### Weblogic
 
+- WeblogicTool：https://github.com/KimJun1010/WeblogicTool
 - WeblogicScan：https://github.com/dr0op/WeblogicScan
 - weblogicScanner：https://github.com/0xn0ne/weblogicScanner
 - weblogic-framework：https://github.com/sv3nbeast/weblogic-framework
-- 
 
 ### Vcenter
 
