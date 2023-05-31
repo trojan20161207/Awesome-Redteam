@@ -8,6 +8,7 @@
 - [重要端口及服务速查](https://github.com/Threekiii/Awesome-Redteam/blob/master/cheatsheets/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5.md)
 
 ## 目录
+
 - [Awesome-Redteam](#awesome-redteam)
   - [快速导航](#快速导航)
   - [目录](#目录)
@@ -39,18 +40,19 @@
       - [扫描/爆破字典](#扫描爆破字典)
       - [字典生成](#字典生成)
       - [默认口令查询](#默认口令查询)
-    - [信息泄露](#信息泄露)
     - [社会工程学](#社会工程学)
     - [浏览器](#浏览器)
     - [综合工具](#综合工具)
   - [漏洞研究](#漏洞研究)
     - [开源资源](#开源资源)
     - [靶机平台](#靶机平台)
+  - [漏洞扫描](#漏洞扫描)
+    - [POC库](#poc库)
+    - [POC编写](#poc编写)
+    - [综合工具](#综合工具-1)
   - [漏洞利用](#漏洞利用)
-    - [综合利用](#综合利用)
-      - [POC](#poc)
-      - [集成工具](#集成工具)
-      - [辅助工具](#辅助工具)
+    - [辅助工具](#辅助工具)
+    - [信息泄露](#信息泄露)
     - [操作系统](#操作系统)
     - [Druid](#druid)
     - [Shiro](#shiro)
@@ -70,13 +72,13 @@
     - [其他](#其他-1)
   - [逆向分析](#逆向分析)
     - [靶机平台](#靶机平台-1)
-    - [综合工具](#综合工具-1)
+    - [综合工具](#综合工具-2)
     - [小程序](#小程序)
     - [APK](#apk)
   - [大数据 / 云存储](#大数据--云存储)
     - [开源资源](#开源资源-1)
     - [靶机平台](#靶机平台-2)
-    - [综合工具](#综合工具-2)
+    - [综合工具](#综合工具-3)
   - [开源蜜罐](#开源蜜罐)
   - [容器安全](#容器安全)
   - [必备工具](#必备工具)
@@ -315,14 +317,6 @@
   - https://www.toolmao.com/baiduapp/routerpwd/
   -  https://datarecovery.com/rd/default-passwords/
 
-### 信息泄露
-
-- GitHack：.git泄露利用脚本 https://github.com/lijiejie/GitHack python3 有时无法恢复.git目录，推荐python2版本
-- GitHack：.git泄露利用脚本https://github.com/BugScanTeam/GitHack python2
-- dvcs-ripper：.svn、.hg、.cvs泄露利用脚本 https://github.com/kost/dvcs-ripper
-- ds_store_exp：.DS_Store 文件泄漏利用脚本 https://github.com/lijiejie/ds_store_exp
-- Hawkeye：GitHub 泄露监控系统 https://github.com/0xbug/Hawkeye 
-
 ### 社会工程学
 
 - Hunter：Chrome插件 查找网页暴露邮箱 https://hunter.io/chrome
@@ -372,11 +366,9 @@
 - Vulstudy：docker快速搭建共17个漏洞靶场 https://github.com/c0ny1/vulstudy
 - Vulfocus：漏洞集成平台 https://github.com/fofapro/vulfocus
 
-## 漏洞利用
+## 漏洞扫描
 
-### 综合利用
-
-#### POC
+### POC库
 
 - Exploit Database：https://www.exploit-db.com/
 - POChouse：https://github.com/DawnFlame/POChouse
@@ -386,7 +378,12 @@
 - PoC-in-GitHub：https://github.com/nomi-sec/PoC-in-GitHub
 - 0day：https://github.com/helloexp/0day
 
-#### 集成工具
+### POC编写
+
+- POC 辅助生成：在线  https://poc.xray.cool/
+- POC 辅助生成：本地 https://github.com/zeoxisca/gamma-gui
+
+### 综合工具
 
 - Xray：安全评估工具 https://github.com/chaitin/xray
 - Super Xray：Xray GUI启动器 https://github.com/4ra1n/super-xray
@@ -394,7 +391,9 @@
 - Artillery：插件化 JAVA 漏洞扫描器 https://github.com/Weik1/Artillery
 - Aazhen-v3.1：JavaFX图形化漏洞扫描工具 https://github.com/zangcc/Aazhen-v3.1
 
-#### 辅助工具
+## 漏洞利用
+
+### 辅助工具
 
 - ysoserial：Java反序列化 https://github.com/frohoff/ysoserial
 - Ceye DNS：在线平台 Dnslog http://ceye.io/
@@ -405,6 +404,14 @@
 - JNDI-Injection-Exploit：https://github.com/welk1n/JNDI-Injection-Exploit
 - JNDIExploit：功能更强 冰蝎内存马 https://github.com/WhiteHSBG/JNDIExploit
 - wscat：Websocket测试工具 https://github.com/websockets/wscat
+
+### 信息泄露
+
+- GitHack：.git泄露利用脚本 https://github.com/lijiejie/GitHack python3 有时无法恢复.git目录，推荐python2版本
+- GitHack：.git泄露利用脚本https://github.com/BugScanTeam/GitHack python2
+- dvcs-ripper：.svn、.hg、.cvs泄露利用脚本 https://github.com/kost/dvcs-ripper
+- ds_store_exp：.DS_Store 文件泄漏利用脚本 https://github.com/lijiejie/ds_store_exp
+- Hawkeye：GitHub 泄露监控系统 https://github.com/0xbug/Hawkeye 
 
 ### 操作系统
 
