@@ -1,6 +1,6 @@
 # Awesome-Redteam
 
-**【免责声明】本仓库所涉及的技术、思路和工具仅供安全技术研究，任何人不得将其用于非授权渗透测试，不得将其用于非法用途和盈利，否则后果自行承担。**
+**【免责声明】本项目所涉及的技术、思路和工具仅供学习，任何人不得将其用于非法用途和盈利，不得将其用于非授权渗透测试，否则后果自行承担，与本项目无关。使用本项目前请先阅读 [法律法规](https://github.com/Threekiii/Awesome-Laws)。**
 
 ## 快速导航
 
@@ -191,6 +191,7 @@
 - Fofa：https://fofa.info/
 - Shodan：https://www.shodan.io/
 - ZoomEye：https://www.zoomeye.org/
+- 鹰图：https://hunter.qianxin.com/
 - 谛听：https://www.ditecting.com/
 - 360网络空间测绘：https://quake.360.cn/quake/#/index
 - Google Hacking Database：https://www.exploit-db.com/google-hacking-database
