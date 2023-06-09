@@ -85,13 +85,14 @@
     - [命令行](#命令行)
     - [Metasploit](#metasploit)
     - [Yakit](#yakit)
-    - [Cobaltstrike](#cobaltstrike)
-    - [Burpsuite](#burpsuite)
-    - [Chrome crx](#chrome-crx)
+    - [Cobaltstrike Extensions](#cobaltstrike-extensions)
+    - [Burpsuite Extensions](#burpsuite-extensions)
+    - [Chrome Extensions](#chrome-extensions)
   - [其他优秀项目](#其他优秀项目)
   - [先mark待测试项目](#先mark待测试项目)
   - [使用姿势](#使用姿势)
     - [如何在Windows上使用alias](#如何在windows上使用alias)
+    - [如何通过.bat运行conda环境下python文件](#如何通过.bat运行conda环境下python文件)
     - [如何使用浏览器快速查看markdown文档](#如何使用浏览器快速查看markdown文档)
 
 
@@ -386,6 +387,7 @@
 
 ### 综合工具
 
+- xpoc：供应链漏洞扫描 https://github.com/chaitin/xpoc
 - Xray：安全评估工具 https://github.com/chaitin/xray
 - Super Xray：Xray GUI启动器 https://github.com/4ra1n/super-xray
 - Vulmap：漏洞扫描和验证工具 https://github.com/zhzyker/vulmap
@@ -602,7 +604,7 @@
 
 - Yakit：网络安全单兵工具 对标Burpsuite https://github.com/yaklang/yakit
 
-### Cobaltstrike
+### Cobaltstrike Extensions
 
 - Awesome CobaltStrike：CobaltStrike知识库 https://github.com/zer0yu/Awesome-CobaltStrike
 
@@ -610,13 +612,13 @@
 - LSTAR：综合后渗透插件 https://github.com/lintstar/LSTAR
 - ElevateKit：提权插件 https://github.com/rsmudge/ElevateKit
 
-### Burpsuite
+### Burpsuite Extensions
 
 - HaE：高亮标记与信息提取辅助型插件 https://github.com/gh0stkey/HaE
 - Log4j2Scan：Log4j主动扫描插件 https://github.com/whwlsfb/Log4j2Scan
 - RouteVulScan：检测脆弱路径插件 https://github.com/F6JO/RouteVulScan
 
-### Chrome crx
+### Chrome Extensions
 
 - Proxy SwitchyOmega：快速切换代理 https://github.com/FelisCatus/SwitchyOmega
 - Wappalyzer：识别网站技术/框架/语言 https://www.wappalyzer.com/
@@ -626,6 +628,7 @@
 - Hack Bar：渗透神器No.1 https://github.com/0140454/hackbar
 - Heimdallr：被动监听的谷歌插件，用于高危指纹识别、蜜罐特征告警和拦截、机器特征对抗 https://github.com/graynjo/Heimdallr
 - immersive-translate：翻译插件 https://github.com/immersive-translate/immersive-translate/
+- json-formatter：Json格式化插件 https://github.com/callumlocke/json-formatter
 
 ## 其他优秀项目
 
@@ -673,6 +676,18 @@
 >
 > 1. 注册表打开`计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor`。
 > 2. 创建字符串值`autorun`，赋值为`chcp 65001`。
+
+### 如何通过.bat运行conda环境下python文件
+
+run.bat
+
+```
+call D:\YOUR_PATH\Anaconda\Scripts\activate.bat D:\YOUR_PATH\Anaconda\
+call conda activate YOUR_ENV
+cd D:\YOUR_WORKDIR
+python YOUR_PYTHON_FILE.py
+pause
+```
 
 ### 如何使用浏览器快速查看markdown文档
 
