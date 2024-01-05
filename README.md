@@ -1,34 +1,34 @@
 # Awesome-Redteam
 
 **【免责声明】本项目所涉及的技术、思路和工具仅供学习，任何人不得将其用于非法用途和盈利，不得将其用于非授权渗透测试，否则后果自行承担，与本项目无关。使用本项目前请先阅读 [法律法规](https://github.com/Threekiii/Awesome-Laws)。**
-
 ## Roadmap
 
 ![](images/README/Awesome-Redteam.png)
+
 ## 目录
 
-- [Roadmap](#roadmap)
+- [目录](#%E7%9B%AE%E5%BD%95)
 - [项目导航](#%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA)
 	- [速查文档-CheatSheets](#%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3-cheatsheets)
 	- [一些代码-Scripts](#%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81-scripts)
 	- [攻防知识-Tips](#%E6%94%BB%E9%98%B2%E7%9F%A5%E8%AF%86-tips)
-	- [云安全-Cloud](#%E4%BA%91%E5%AE%89%E5%85%A8-cloud)
 - [开源导航](#%E5%BC%80%E6%BA%90%E5%AF%BC%E8%88%AA)
 	- [编解码/加解密综合](#%E7%BC%96%E8%A7%A3%E7%A0%81%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%BB%BC%E5%90%88)
 	- [常见编解码/加解密](#%E5%B8%B8%E8%A7%81%E7%BC%96%E8%A7%A3%E7%A0%81%E5%8A%A0%E8%A7%A3%E5%AF%86)
-	- [威胁情报/开源情报](#%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%BC%80%E6%BA%90%E6%83%85%E6%8A%A5)
+	- [威胁情报](#%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5)
 	- [网络空间搜索](#%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2)
+	- [OSINT](#osint)
 	- [公开知识库](#%E5%85%AC%E5%BC%80%E7%9F%A5%E8%AF%86%E5%BA%93)
 	- [在线工具](#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7)
 - [信息收集](#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
 	- [IP/域名/子域名](#ip%E5%9F%9F%E5%90%8D%E5%AD%90%E5%9F%9F%E5%90%8D)
-		- [确认真实IP地址](#%E7%A1%AE%E8%AE%A4%E7%9C%9F%E5%AE%9Eip%E5%9C%B0%E5%9D%80)
+		- [IP信息收集](#ip%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
 		- [多个地点Ping服务器](#%E5%A4%9A%E4%B8%AA%E5%9C%B0%E7%82%B9ping%E6%9C%8D%E5%8A%A1%E5%99%A8)
 		- [IP反查域名](#ip%E5%8F%8D%E6%9F%A5%E5%9F%9F%E5%90%8D)
-		- [Whois注册信息反查](#whois%E6%B3%A8%E5%86%8C%E4%BF%A1%E6%81%AF%E5%8F%8D%E6%9F%A5)
-		- [DNS数据聚合查询](#dns%E6%95%B0%E6%8D%AE%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2)
-		- [TLS证书信息查询](#tls%E8%AF%81%E4%B9%A6%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2)
-		- [IP地址段收集](#ip%E5%9C%B0%E5%9D%80%E6%AE%B5%E6%94%B6%E9%9B%86)
+		- [Whois信息收集](#whois%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
+		- [DNS信息收集](#dns%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
+		- [ASN信息收集](#asn%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
+		- [TLS证书查询](#tls%E8%AF%81%E4%B9%A6%E6%9F%A5%E8%AF%A2)
 	- [指纹识别](#%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB)
 	- [扫描/爆破](#%E6%89%AB%E6%8F%8F%E7%88%86%E7%A0%B4)
 		- [扫描/爆破工具](#%E6%89%AB%E6%8F%8F%E7%88%86%E7%A0%B4%E5%B7%A5%E5%85%B7)
@@ -36,6 +36,7 @@
 		- [字典生成](#%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90)
 		- [默认口令查询](#%E9%BB%98%E8%AE%A4%E5%8F%A3%E4%BB%A4%E6%9F%A5%E8%AF%A2)
 	- [社会工程学](#%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6)
+		- [凭据泄露](#%E5%87%AD%E6%8D%AE%E6%B3%84%E9%9C%B2)
 		- [邮箱](#%E9%82%AE%E7%AE%B1)
 		- [钓鱼](#%E9%92%93%E9%B1%BC)
 	- [公众号/小程序](#%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F%E7%A8%8B%E5%BA%8F)
@@ -58,18 +59,21 @@
 	- [XSS](#xss)
 	- [DNSLog](#dnslog)
 	- [Payload/Bypass](#payloadbypass)
-- [内网渗透](#%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F)
-	- [内网探测](#%E5%86%85%E7%BD%91%E6%8E%A2%E6%B5%8B)
-	- [凭证提取](#%E5%87%AD%E8%AF%81%E6%8F%90%E5%8F%96)
-	- [后渗透](#%E5%90%8E%E6%B8%97%E9%80%8F)
-	- [权限提升](#%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87)
-	- [权限维持](#%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81)
-	- [免杀项目](#%E5%85%8D%E6%9D%80%E9%A1%B9%E7%9B%AE)
-	- [内网穿透](#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F)
-	- [域内漏洞](#%E5%9F%9F%E5%86%85%E6%BC%8F%E6%B4%9E)
-	- [痕迹清理](#%E7%97%95%E8%BF%B9%E6%B8%85%E7%90%86)
-- [攻击溯源](#%E6%94%BB%E5%87%BB%E6%BA%AF%E6%BA%90)
-	- [研判工具](#%E7%A0%94%E5%88%A4%E5%B7%A5%E5%85%B7)
+- [内网渗透 Red Teaming](#%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-red-teaming)
+	- [凭证获取 Credential Access](#%E5%87%AD%E8%AF%81%E8%8E%B7%E5%8F%96-credential-access)
+	- [后渗透 Post Exploitation](#%E5%90%8E%E6%B8%97%E9%80%8F-post-exploitation)
+	- [权限提升 Privilege Escalation](#%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87-privilege-escalation)
+	- [权限维持 Persistence](#%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81-persistence)
+	- [免杀项目 Defense Evasion](#%E5%85%8D%E6%9D%80%E9%A1%B9%E7%9B%AE-defense-evasion)
+	- [内网穿透 Proxy](#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-proxy)
+	- [域内漏洞 AD / Kerberos](#%E5%9F%9F%E5%86%85%E6%BC%8F%E6%B4%9E-ad--kerberos)
+	- [辅助工具 Auxiliary Tools](#%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7-auxiliary-tools)
+- [安全防护](#%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4)
+	- [内存马查杀](#%E5%86%85%E5%AD%98%E9%A9%AC%E6%9F%A5%E6%9D%80)
+	- [Webshell查杀](#webshell%E6%9F%A5%E6%9D%80)
+	- [攻击研判](#%E6%94%BB%E5%87%BB%E7%A0%94%E5%88%A4)
+	- [基线加固](#%E5%9F%BA%E7%BA%BF%E5%8A%A0%E5%9B%BA)
+	- [勒索病毒](#%E5%8B%92%E7%B4%A2%E7%97%85%E6%AF%92)
 	- [逆向分析](#%E9%80%86%E5%90%91%E5%88%86%E6%9E%90)
 - [云安全](#%E4%BA%91%E5%AE%89%E5%85%A8)
 	- [云安全资源](#%E4%BA%91%E5%AE%89%E5%85%A8%E8%B5%84%E6%BA%90)
@@ -101,6 +105,7 @@
 	- [如何配合tabby实现高效操作](#%E5%A6%82%E4%BD%95%E9%85%8D%E5%90%88tabby%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E6%93%8D%E4%BD%9C)
 	- [如何解决cmd中文乱码](#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3cmd%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81)
 
+
 ## 项目导航
 
 ### 速查文档-CheatSheets
@@ -114,7 +119,7 @@ WeakPassword-Cheat-Sheet.csv
 安全厂商及官网链接速查.txt
 ```
 
-### 一些代码-Scripts 
+### 一些代码-Scripts
 
 戳这里 [Click Here](https://github.com/Threekiii/Awesome-Redteam/blob/master/scripts/)
 
@@ -222,12 +227,12 @@ Flask_Session_Decryptor: Flask session注入解密
 - OSINT Resource List: https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list
 - OSINT Framework: https://osintframework.com/
 - OSINT_Handbook: https://i-intelligence.eu/uploads/public-documents/OSINT_Handbook_2020.pdf
-- Pentest Tools:  https://pentest-tools.com/
-- Public APIs: 
+- Pentest Tools: https://pentest-tools.com/
+- Public APIs:
 	- https://www.postman.com/explore/
 	- https://rapidapi.com/
 - Discover secret API keys: https://serene-agnesi-57a014.netlify.app/
-- Source code Search Engine: 
+- Source code Search Engine:
 	- https://publicwww.com/
 	- https://searchcode.com/
 
@@ -242,29 +247,29 @@ Flask_Session_Decryptor: Flask session注入解密
 
 #### Only available in English
 
-- Hacking articles:  https://www.hackingarticles.in/
-- PostSwigger blog:  https://portswigger.net/blog
-- InGuardians Labs blog:  https://www.inguardians.com/
-- Mitre ATT&CK: 
-	- matics:  https://attack.mitre.org/matrices/enterprise
-	- techniques:  http://attack.mitre.org/techniques/enterprise/ 
-- Red teaming and offensive security:  https://www.ired.team/ 
-- Convention material:  https://infocon.org/
-- Evasion techniques:  https://evasions.checkpoint.com/
-- Pentest Workflow:  https://pentest.mxhx.org/ 
-- Pentest cheatsheet:  https://pentestbook.six2dez.com/ 
+- Hacking articles: https://www.hackingarticles.in/
+- PostSwigger blog: https://portswigger.net/blog
+- InGuardians Labs blog: https://www.inguardians.com/
+- Mitre ATT&CK:
+	- matics: https://attack.mitre.org/matrices/enterprise
+	- techniques: http://attack.mitre.org/techniques/enterprise/
+- Red teaming and offensive security: https://www.ired.team/
+- Convention material: https://infocon.org/
+- Evasion techniques: https://evasions.checkpoint.com/
+- Pentest Workflow: https://pentest.mxhx.org/
+- Pentest cheatsheet: https://pentestbook.six2dez.com/
 
 ### 在线工具
 
-- 反弹Shell生成: 
+- 反弹Shell生成:
   - 本地部署项目 https://github.com/0dayCTF/reverse-shell-generator
   - 棱角安全在线 https://forum.ywhack.com/reverse-shell/
-- 文件下载命令: 
+- 文件下载命令:
   - 本地部署项目 https://github.com/r0eXpeR/File-Download-Generator
 - 棱角安全在线 https://forum.ywhack.com/bountytips.php?tools
 - 在线正则表达式: https://c.runoob.com/front-end/854/
 - 在线代码格式标准化: http://web.chacuo.net/formatsh
-- 接收手机验证码: https://www.supercloudsms.com/en/ 
+- 接收手机验证码: https://www.supercloudsms.com/en/
 - 临时邮箱: http://24mail.chacuo.net/
 - 短链接生成: https://a.f8x.io/
 
@@ -298,7 +303,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - https://whois.chinaz.com/
 - https://whois.aliyun.com/
 - https://who.is/
-- https://www.whoxy.com/ 
+- https://www.whoxy.com/
 
 #### DNS信息收集
 
@@ -331,7 +336,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/EdgeSecurityTeam/EHole
 	- https://github.com/0x727/ObserverWard
 	- https://github.com/TideSec/TideFinger
-	-  https://github.com/zhzyker/dismap
+	- https://github.com/zhzyker/dismap
 	- https://www.webshell.cc/4697.html
 	- http://www.yunsee.cn/ online
 	- https://github.com/AliasIO/Wappalyzer chrome extension
@@ -372,14 +377,14 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/insightglacier/Dictionary-Of-Pentesting
 	- https://github.com/TheKingOfDuck/fuzzDicts
 	- https://github.com/gh0stkey/Web-Fuzzing-Box
-	-  https://github.com/ppbibo/PentesterSpecialDict
+	- https://github.com/ppbibo/PentesterSpecialDict
 	- https://github.com/Bo0oM/fuzz.txt
 	- https://github.com/assetnote/wordlists
 - Web fuzz wordlists:
 	- https://github.com/lutfumertceylan/top25-parameter
 - Others (not frequently used):
 	- https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content
-	- https://github.com/assetnote/commonspeak2-wordlists/tree/master/wordswithext 
+	- https://github.com/assetnote/commonspeak2-wordlists/tree/master/wordswithext
 	- https://github.com/random-robbie/bruteforce-lists
 	- https://github.com/google/fuzzing/tree/master/dictionaries
 	- https://github.com/six2dez/OneListForAll
@@ -402,8 +407,8 @@ Flask_Session_Decryptor: Flask session注入解密
 - Default Credentials Cheat Sheet: 3468个默认密码 https://github.com/ihebski/DefaultCreds-cheat-sheet
 - datarecovery: 在线默认口令查询 https://datarecovery.com/rd/default-passwords/
 - cirt.net: 在线默认口令查询 https://cirt.net/passwords
-- 在线路由器密码查询: 
-  -  https://www.routerpasswords.com/
+- 在线路由器密码查询:
+  - https://www.routerpasswords.com/
   - https://portforward.com/router-password/
   - https://www.cleancss.com/router-default/
   - https://www.toolmao.com/baiduapp/routerpwd/
@@ -419,7 +424,7 @@ Flask_Session_Decryptor: Flask session注入解密
 #### 邮箱
 
 - Snov.io: https://app.snov.io
-- Phonebook: also works on subdomains and urls https://phonebook.cz 
+- Phonebook: also works on subdomains and urls https://phonebook.cz
 - Skymem: https://www.skymem.info
 - Hunter: https://hunter.io
 - email-format: https://www.email-format.com/i/search/
@@ -455,7 +460,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - hping3: 端口扫描 高速 发包量少 结果准确无蜜罐 https://github.com/antirez/hping
 - ENScan_GO: 国内企业信息收集 https://github.com/wgpsec/ENScan_GO
 - Ladon: 用于大型网络渗透的多线程插件化综合扫描工具 https://github.com/k8gege/Ladon
-- Amass:  https://github.com/OWASP/Amass
+- Amass: https://github.com/OWASP/Amass
 
 ## 漏洞研究
 
@@ -482,7 +487,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - Upload-labs: 上传漏洞 https://github.com/c0ny1/upload-labs
 - Vulstudy: docker快速搭建共17个漏洞靶场 https://github.com/c0ny1/vulstudy
 - Vulfocus: 漏洞集成平台 https://github.com/fofapro/vulfocus
--  IoT-vulhub:  IoT 版固件漏洞复现环境 https://github.com/firmianay/IoT-vulhub
+- IoT-vulhub: IoT 版固件漏洞复现环境 https://github.com/firmianay/IoT-vulhub
 
 ### PoC库
 
@@ -498,7 +503,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### PoC编写
 
-- POC 辅助生成: 在线  https://poc.xray.cool/
+- POC 辅助生成: 在线 https://poc.xray.cool/
 - POC 辅助生成: 本地 https://github.com/zeoxisca/gamma-gui
 
 ## 漏洞利用
@@ -536,7 +541,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - GitHack: .git泄露利用脚本https://github.com/BugScanTeam/GitHack python2
 - dvcs-ripper: .svn、.hg、.cvs泄露利用脚本 https://github.com/kost/dvcs-ripper
 - ds_store_exp: .DS_Store 文件泄漏利用脚本 https://github.com/lijiejie/ds_store_exp
-- Hawkeye: GitHub 泄露监控系统 https://github.com/0xbug/Hawkeye 
+- Hawkeye: GitHub 泄露监控系统 https://github.com/0xbug/Hawkeye
 
 ### CMS/OA
 
@@ -572,7 +577,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - jdwp-shellifier: https://github.com/Lz1y/jdwp-shellifier
 - attackRmi: https://github.com/A-D-Team/attackRmi
 
-
 #### Shiro
 
 - Shiro rememberMe 在线解密: https://vulsee.com/tools/shiroDe/shiroDecrypt.html
@@ -593,7 +597,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - SpringBootVulExploit: https://github.com/LandGrey/SpringBootVulExploit
 - Spring-cloud-function-SpEL-RCE: CVE-2022-22963 https://github.com/mamba-2021/EXP-POC/tree/main/Spring-cloud-function-SpEL-RCE
 - swagger-exp: Swagger REST API 信息泄露利用工具 https://github.com/lijiejie/swagger-exp
-- heapdump_tool: heapdump敏感信息查询工具 https://github.com/wyzxxz/heapdump_tool 
+- heapdump_tool: heapdump敏感信息查询工具 https://github.com/wyzxxz/heapdump_tool
 - JDumpSpider: HeapDump敏感信息提取工具 https://github.com/whwlsfb/JDumpSpider
 - Memory Analyzer: HeapDump分析工具 https://www.eclipse.org/mat/previousReleases.php
 
@@ -628,8 +632,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - ZooInspector: ZooKeeper 客户端监控软件 https://issues.apache.org/jira/secure/attachment/12436620/ZooInspector.zip
 - apache-zookeeper: zkCli.sh 客户端命令连接 https://archive.apache.org/dist/zookeeper/zookeeper-3.5.6/
 
-
-
 ## 渗透测试
 
 ### XSS
@@ -659,7 +661,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - Gopherus: SSRF 生成gopher链接 https://github.com/tarunkant/Gopherus python2
 - CVE-2021-44228-PoC-log4j-bypass-words: https://github.com/Puliczek/CVE-2021-44228-PoC-log4j-bypass-words
 
-
 ## 内网渗透 Red Teaming
 
 ### 凭证获取 Credential Access
@@ -668,7 +669,6 @@ Flask_Session_Decryptor: Flask session注入解密
 	- LaZagne: https://github.com/AlessandroZ/LaZagne
 	- WirelessKeyView: https://www.nirsoft.net/utils/wireless_key.html
 	- Windows credential manager: https://www.nirsoft.net/utils/credentials_file_view.html
-
 - Local Enumeration:
 	- HackBrowserData: https://github.com/moonD4rk/HackBrowserData
 	- BrowserGhost: https://github.com/QAX-A-Team/BrowserGhost
@@ -682,7 +682,6 @@ Flask_Session_Decryptor: Flask session注入解密
 	- securreCRT: https://github.com/depau/shcrt
 	- xshell: https://github.com/JDArmy/SharpXDecrypt
 	- xshell: https://github.com/HyperSine/how-does-Xmanager-encrypt-password
-
 
 ### 后渗透 Post Exploitation
 
@@ -714,12 +713,12 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1
 	- https://github.com/dafthack/DomainPasswordSpray
 	- https://github.com/dafthack/MailSniper
-- Windows Exploits: 
+- Windows Exploits:
 	- https://github.com/AonCyberLabs/Windows-Exploit-Suggester
 	- https://github.com/SecWiki/windows-kernel-exploits
 	- https://github.com/Al1ex/WindowsElevation
 	- https://i.hacking8.com/tiquan/ online
-- Linux Exploits: 
+- Linux Exploits:
 	- https://github.com/The-Z-Labs/linux-exploit-suggester
 	- https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
 - Database Exploits:
@@ -739,7 +738,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - bypassAV: 免杀shellcode加载器 过火绒不过360 https://github.com/pureqh/bypassAV
 - GolangBypassAV: https://github.com/safe6Sec/GolangBypassAV
-- BypassAntiVirus: 远控免杀系列文章及配套工具 https://github.com/TideSec/BypassAntiVirus 
+- BypassAntiVirus: 远控免杀系列文章及配套工具 https://github.com/TideSec/BypassAntiVirus
 - AV_Evasion_Tool: 掩日 - 适用于红队的综合免杀工具 https://github.com/1y0n/AV_Evasion_Tool
 - shellcodeloader: Windows平台的shellcode免杀加载器 https://github.com/knownsec/shellcodeloader
 - 杀软比对1: tasklist/systeminfo https://www.shentoushi.top/av/av.php
@@ -751,12 +750,12 @@ Flask_Session_Decryptor: Flask session注入解密
 - nps: proxy server with a web management terminal https://github.com/ehang-io/nps
 - frp: 55k star https://github.com/fatedier/frp
 - reGeorg: https://github.com/sensepost/reGeorg
-- Neo-reGeorg:  https://github.com/L-codes/Neo-reGeorg
-- rakshasa: multi-hop proxy 多级代理  https://github.com/Mob2003/rakshasa
+- Neo-reGeorg: https://github.com/L-codes/Neo-reGeorg
+- rakshasa: multi-hop proxy 多级代理 https://github.com/Mob2003/rakshasa
 - Stowaway: multi-hop proxy 多级代理 https://github.com/ph4ntonn/Stowaway
 - Viper: platform with webui https://github.com/FunnyWolf/Viper
-- Proxifier: tools for windows https://www.proxifier.com/ 
-- Proxychains: tools for kali https://github.com/haad/proxychains 
+- Proxifier: tools for windows https://www.proxifier.com/
+- Proxychains: tools for kali https://github.com/haad/proxychains
 - iodine: dns tunnel https://github.com/yarrick/iodine
 - dnscat2: dns tunnel https://github.com/iagox86/dnscat2
 - icmpsh: icmp tunnel https://github.com/bdamele/icmpsh
@@ -765,7 +764,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - noPac: CVE-2021-42278 / CVE-2021-42287 https://github.com/Ridter/noPac
 - PetitPotam: NTLM relay https://github.com/topotam/PetitPotam
-- Zerologon CVE-2020-1472: 
+- Zerologon CVE-2020-1472:
 	- https://github.com/XiaoliChan/zerologon-Shot
 	- https://github.com/dirkjanm/CVE-2020-1472
 	- https://github.com/Potato-py/Potato/tree/03c3551e4770db440b27b0a48fc02b0a38a1cf04/exp/cve/CVE-2020-1472 reset password
@@ -773,18 +772,60 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 辅助工具 Auxiliary Tools
 
-- updog: uploading and downloading via HTTP/S 文件传输  https://github.com/sc0tfree/updog
+- updog: uploading and downloading via HTTP/S 文件传输 https://github.com/sc0tfree/updog
 - Privacy.sexy: Scripts for Windows/macOS/Linux 痕迹清理 https://privacy.sexy/
 
-## 攻击溯源
+## 安全防护
 
-### 研判工具
+### 内存马查杀
+
+- Java 内存马查杀:
+	- https://github.com/LandGrey/copagent
+	- https://github.com/c0ny1/java-memshell-scanner
+- Aspx 内存马查杀: https://github.com/yzddmr6/ASP.NET-Memshell-Scanner
+
+### Webshell查杀
 
 - Webshell Chop: https://webshellchop.chaitin.cn/demo/
-- WebShell 查杀: https://n.shellpub.com/
-- CobaltStrike流量解密脚本:  https://github.com/5ime/CS_Decrypt
+- WebShell 查杀:
+	- https://n.shellpub.com/
+	- http://www.shellpub.com
+
+### 攻击研判
+
+- CobaltStrike流量解密脚本: https://github.com/5ime/CS_Decrypt
 - BlueTeamTools: 综合工具 https://github.com/abc123info/BlueTeamTools
 - IP Logger: 使用生成的短网址获取访问者IP地址 https://iplogger.org/
+
+### 基线加固
+
+- https://github.com/AV1080p/Benchmarks
+- https://github.com/xiaoyunjie/Shell_Script
+- https://github.com/grayddq/GScan
+- https://github.com/ppabc/security_check
+- https://github.com/T0xst/linux
+
+### 勒索病毒
+
+#### 搜索引擎
+
+- 360: http://lesuobingdu.360.cn
+- 腾讯: https://guanjia.qq.com/pr/ls
+- 启明星辰: https://lesuo.venuseye.com.cn
+- 奇安信: https://lesuobingdu.qianxin.com
+- 深信服: https://edr.sangfor.com.cn/#/information/ransom_search
+
+#### 解密工具
+
+- 腾讯: https://habo.qq.com/tool
+- 金山毒霸: http://www.duba.net/dbt/wannacry.html
+- 瑞星: http://it.rising.com.cn/fanglesuo/index.html
+- 卡巴斯基: https://noransom.kaspersky.com/
+- https://www.nomoreransom.org/zh/index.html
+- https://id-ransomware.malwarehunterteam.com
+- https://www.avast.com/zh-cn/ransomware-decryption-tool
+- https://www.emsisoft.com/en/ransomware-decryption/
+- Decryption-Tools: 勒索病毒解密工具收集项目 https://github.com/jiansiting/Decryption-Tools
 
 ### 逆向分析
 
@@ -804,7 +845,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - TeamsSix 云安全资源: https://github.com/teamssix/awesome-cloud-security
 - 云安全知识文库: https://wiki.teamssix.com/
 - lzCloudSecurity: 云安全攻防入门
-  - Github: https://github.com/EvilAnne/lzCloudSecurity 
+  - Github: https://github.com/EvilAnne/lzCloudSecurity
   - Gitbook: https://lzcloudsecurity.gitbook.io/yun-an-quan-gong-fang-ru-men/
 - Awesome-CloudSec-Labs: 云原生安全 https://github.com/iknowjason/Awesome-CloudSec-Labs
 - 阿里云OpenAPI: https://next.api.aliyun.com/api/
@@ -852,13 +893,12 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - KubeHound: 识别 Kubernetes 集群攻击路径 https://github.com/DataDog/KubeHound
 
-
 ## 移动端安全
 
 ### 小程序
 
 - wxappUnpacker: 小程序解包 https://github.com/xuedingmiaojun/wxappUnpacker
-- CrackMinApp: 反编译微信小程序 https://github.com/Cherrison/CrackMinApp  
+- CrackMinApp: 反编译微信小程序 https://github.com/Cherrison/CrackMinApp
 
 ### APK
 
@@ -871,6 +911,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - BurpAppletPentester: SessionKey解密插件 https://github.com/mrknow001/BurpAppletPentester
 
 ## 其他方向
+
 ### 开源蜜罐
 
 - awesome-honeypots: 开源蜜罐列表 https://github.com/paralax/awesome-honeypots
@@ -890,9 +931,9 @@ Flask_Session_Decryptor: Flask session注入解密
 - clink: cmd.exe 加强版补全、历史记录和行编辑 https://github.com/chrisant996/clink
 - tabby: 高度可配置终端 https://github.com/Eugeny/tabby
 - anew: 命令行工具 文件合并去重 https://github.com/tomnomnom/anew
-- Platypus: 反弹shell管理  https://github.com/WangYihang/Platypus
+- Platypus: 反弹shell管理 https://github.com/WangYihang/Platypus
 - The art of command line: 快速掌握命令行 https://github.com/jlevy/the-art-of-command-line
-- Linux命令行提示工具: 
+- Linux命令行提示工具:
 	- https://github.com/jaywcjlove/linux-command online版
 	- https://github.com/chenjiandongx/pls golang版
 	- https://github.com/chenjiandongx/how python版
@@ -960,7 +1001,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 如何通过.bat使用alias
 
-- 创建alias.bat，实现查看md文档、运行exe程序、激活conda环境等功能。文件内容示例: 
+- 创建alias.bat，实现查看md文档、运行exe程序、激活conda环境等功能。文件内容示例:
 
 ```
 @echo off
@@ -993,8 +1034,7 @@ pause
 ### 如何配合tabby实现高效操作
 
 - 安装tabby: https://github.com/Eugeny/tabby
-
-- 可以通过tabby实现自定义shell配置，包括但不限于: 
+- 可以通过tabby实现自定义shell配置，包括但不限于:
 	- vps ssh/ftp/sftp
 	- 自动补全命令（clink）
 	- 快速打开工作区
