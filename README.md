@@ -1,6 +1,7 @@
 # Awesome-Redteam
 
 **【免责声明】本项目所涉及的技术、思路和工具仅供学习，任何人不得将其用于非法用途和盈利，不得将其用于非授权渗透测试，否则后果自行承担，与本项目无关。使用本项目前请先阅读 [法律法规](https://github.com/Threekiii/Awesome-Laws)。**
+
 ## Roadmap
 
 ![](images/README/Awesome-Redteam-20240105.png)
@@ -105,7 +106,6 @@
 	- [如何配合tabby实现高效操作](#%E5%A6%82%E4%BD%95%E9%85%8D%E5%90%88tabby%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E6%93%8D%E4%BD%9C)
 	- [如何解决cmd中文乱码](#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3cmd%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81)
 
-
 ## 项目导航
 
 ### 速查文档-CheatSheets
@@ -154,11 +154,21 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 编解码/加解密综合
 
-- CyberChef: 编解码及加密，可本地部署 https://github.com/gchq/CyberChef
-- OK Tools在线工具: https://github.com/wangyiwy/oktools
-- CTF在线工具: http://www.hiencode.com/
-- XSSEE: 在线综合编解码工具 https://evilcos.me/lab/xssee/
-- MeTools: 在线综合编解码工具 http://www.metools.info/code/quotedprintable231.html
+- 在线工具：
+	- http://www.ip33.com/
+	- https://evilcos.me/lab/xssee/
+	- http://www.metools.info/
+	- https://www.107000.com/
+	- https://github.com/wangyiwy/oktools
+	- http://www.hiencode.com/
+	- http://www.atoolbox.net/
+	- https://www.sojson.com/
+	- https://the-x.cn/
+- 离线工具：
+	- Ciphey: https://github.com/Ciphey/Ciphey python
+	- CyberChef: https://github.com/gchq/CyberChef web
+	- ctfcode: http://1o1o.xyz/bo_ctfcode.html
+	- CaptfEncoder: https://github.com/guyoung/CaptfEncoder
 
 ### 常见编解码/加解密
 
@@ -187,7 +197,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - 360威胁情报: https://ti.360.net/#/homepage
 - 安恒威胁情报: https://ti.dbappsecurity.com.cn/
 - 火线安全平台: https://www.huoxian.cn
-- 知道创宇漏洞平台: https://www.seebug.org/
 - 知道创宇黑客新闻流: https://hackernews.cc/
 - Hacking8安全信息流: https://i.hacking8.com/
 - SecWiki安全信息流: https://www.sec-wiki.com/
@@ -364,6 +373,8 @@ Flask_Session_Decryptor: Flask session注入解密
 - Password:
 	- https://github.com/vanhauser-thc/thc-hydra
 	- https://github.com/openwall/john
+	- https://github.com/hashcat/hashcat
+	- https://github.com/galkan/crowbar supports sshkey and openvpn
 - Json web token (JWT):
 	- https://github.com/ticarpi/jwt_tool
 	- https://github.com/brendan-rius/c-jwt-cracker
@@ -438,9 +449,10 @@ Flask_Session_Decryptor: Flask session注入解密
 - gophish: 钓鱼邮件 https://github.com/gophish/gophish
 - SpoofWeb: 一键部署 https 钓鱼网站 https://github.com/5icorgi/SpoofWeb
 
-### 公众号/小程序
+### 小程序/APP
 
 - 小蓝本: https://www.xiaolanben.com/
+- 七麦数据：https://www.qimai.cn/
 
 ### 浏览器
 
@@ -455,29 +467,42 @@ Flask_Session_Decryptor: Flask session注入解密
 - FofaX: https://github.com/xiecat/fofax
 - Fofa Viewer: https://github.com/wgpsec/fofa_viewer
 - Fofa GUI: https://github.com/bewhale/FOFA_GUI
-- kscan: 综合扫描 https://github.com/lcvvvv/kscan
-- fscan: 内网综合扫描工具 https://github.com/shadow1ng/fscan
-- hping3: 端口扫描 高速 发包量少 结果准确无蜜罐 https://github.com/antirez/hping
-- ENScan_GO: 国内企业信息收集 https://github.com/wgpsec/ENScan_GO
-- Ladon: 用于大型网络渗透的多线程插件化综合扫描工具 https://github.com/k8gege/Ladon
+- kscan: https://github.com/lcvvvv/kscan
+- fscan: https://github.com/shadow1ng/fscan
+- ENScan_GO: https://github.com/wgpsec/ENScan_GO
+- Ladon: https://github.com/k8gege/Ladon
 - Amass: https://github.com/OWASP/Amass
+- hping3: 端口扫描 高速 发包量少 结果准确无蜜罐 https://github.com/antirez/hping
 
 ## 漏洞研究
 
 ### 开源资源
 
-- HackerOne: https://www.hackerone.com/
-- Sploitus: Exploits 搜索引擎 https://sploitus.com/
-- Exploit Database: Exploits 搜索引擎 https://www.exploit-db.com/ kali中可以配合命令 `searchsploit <keywords>` 使用
-- cve: 收录了几乎所有公开的CVE https://github.com/trickest/cve
-- Vulhub: 基于Docker的漏洞复现环境 https://vulhub.org/
-- PeiQi: 面向网络安全从业者的知识文库 http://wiki.peiqi.tech/
-- Vulnerability: 棱角社区公布漏洞 https://github.com/EdgeSecurityTeam/Vulnerability
-- 乌云镜像: http://wooyun.2xss.cc/
-- 未授权访问漏洞总结: http://luckyzmj.cn/posts/15dff4d3.html
+- 国内信息披露平台：
+	- https://www.cnnvd.org.cn/
+	- https://www.cert.org.cn/
+	- https://www.scap.org.cn/
+	- https://www.seebug.org/
+	- https://stack.chaitin.com/vuldb/
+	- https://avd.aliyun.com/high-risk/list
+- 国外信息披露平台：
+	- https://cve.mitre.org/
+	- https://nvd.nist.gov/
+	- https://www.rapid7.com/db/
+	- https://packetstormsecurity.com/files/tags/exploit
+	- https://github.com/trickest/cve
+- Exploits搜索引擎：
+	- https://sploitus.com/
+	- https://www.exploit-db.com/ kali中可以配合命令 `searchsploit <keywords>` 使用
+- 漏洞文库：
+	- http://wooyun.2xss.cc/ Wooyun镜像
+	- https://peiqi.wgpsec.org/
+- Bug Bounty：
+	- HackerOne: https://www.hackerone.com/
 
-### 靶机平台
+### 漏洞复现
 
+- Vulhub: https://vulhub.org/
 - DVWA: https://github.com/digininja/DVWA
 - HackTheBox: https://www.hackthebox.com/
 - OWASP Top10: https://owasp.org/www-project-juice-shop/
@@ -493,7 +518,6 @@ Flask_Session_Decryptor: Flask session注入解密
 
 > Be careful Malware，POC 库最新的 CVE 可能存在投毒风险。
 
-- Exploit Database: https://www.exploit-db.com/
 - POChouse: https://github.com/DawnFlame/POChouse
 - Some-PoC-oR-ExP: 各种漏洞PoC、ExP的收集或编写 https://github.com/coffeehb/Some-PoC-oR-ExP
 - Library-POC: 基于Pocsuite3、goby编写的漏洞poc&exp存档 https://github.com/luck-ying/Library-POC
