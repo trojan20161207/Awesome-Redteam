@@ -558,6 +558,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - redis-rogue-server: Redis 未授权 https://github.com/n0b0dyCN/redis-rogue-server
 - redis-rce: Redis 未授权 https://github.com/Ridter/redis-rce
 - mysql-fake-server: MySQL JDBC 客户端 Java 反序列化漏洞利用 https://github.com/4ra1n/mysql-fake-server
+- MDUT: Multiple Database Utilization Tools https://github.com/SafeGroceryStore/MDUT
 
 ### 信息泄露
 
@@ -585,11 +586,16 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - etcd: etcdctl https://github.com/etcd-io/etcd
 
+#### Fastjson
+
+- fastjson-exp: https://github.com/amaz1ngday/fastjson-exp
+
 #### Nacos
 
 - NacosRce: Nacos Hessian 反序列化 https://github.com/c0olw/NacosRce/
 - nacosleak: 获取nacos中配置文件信息 https://github.com/a1phaboy/nacosleak
 - nacosScan: jwt硬编码、api未授权添加用户、配置读取 https://github.com/Whoopsunix/nacosScan
+- NacosExploitGUI: https://github.com/charonlight/NacosExploitGUI
 
 #### Nps
 
@@ -711,7 +717,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - NICE TOOLS:
 	- https://github.com/byt3bl33d3r/CrackMapExec
-	- https://github.com/SecureAuthCorp/impacket
+	- https://github.com/fortra/impacket
 	- https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 - Tools for AD:
 	- https://github.com/SpecterOps/BloodHound
