@@ -8,7 +8,6 @@
 
 ## 目录
 
-- [目录](#%E7%9B%AE%E5%BD%95)
 - [项目导航](#%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA)
 	- [速查文档-CheatSheets](#%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3-cheatsheets)
 	- [一些代码-Scripts](#%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81-scripts)
@@ -20,6 +19,7 @@
 	- [网络空间搜索](#%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2)
 	- [OSINT](#osint)
 	- [公开知识库](#%E5%85%AC%E5%BC%80%E7%9F%A5%E8%AF%86%E5%BA%93)
+		- [Only available in English](#only-available-in-english)
 	- [在线工具](#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7)
 - [信息收集](#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
 	- [IP/域名/子域名](#ip%E5%9F%9F%E5%90%8D%E5%AD%90%E5%9F%9F%E5%90%8D)
@@ -40,12 +40,11 @@
 		- [凭据泄露](#%E5%87%AD%E6%8D%AE%E6%B3%84%E9%9C%B2)
 		- [邮箱](#%E9%82%AE%E7%AE%B1)
 		- [钓鱼](#%E9%92%93%E9%B1%BC)
-	- [公众号/小程序](#%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F%E7%A8%8B%E5%BA%8F)
-	- [浏览器](#%E6%B5%8F%E8%A7%88%E5%99%A8)
+	- [小程序/APP](#%E5%B0%8F%E7%A8%8B%E5%BA%8Fapp)
 	- [综合工具](#%E7%BB%BC%E5%90%88%E5%B7%A5%E5%85%B7)
 - [漏洞研究](#%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6)
 	- [开源资源](#%E5%BC%80%E6%BA%90%E8%B5%84%E6%BA%90)
-	- [靶机平台](#%E9%9D%B6%E6%9C%BA%E5%B9%B3%E5%8F%B0)
+	- [漏洞复现](#%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0)
 	- [PoC库](#poc%E5%BA%93)
 	- [PoC编写](#poc%E7%BC%96%E5%86%99)
 - [漏洞利用](#%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8)
@@ -67,7 +66,7 @@
 	- [权限维持 Persistence](#%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81-persistence)
 	- [免杀项目 Defense Evasion](#%E5%85%8D%E6%9D%80%E9%A1%B9%E7%9B%AE-defense-evasion)
 	- [内网穿透 Proxy](#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-proxy)
-	- [域内漏洞 AD / Kerberos](#%E5%9F%9F%E5%86%85%E6%BC%8F%E6%B4%9E-ad--kerberos)
+	- [域渗透 AD / Kerberos](#%E5%9F%9F%E6%B8%97%E9%80%8F-ad--kerberos)
 	- [辅助工具 Auxiliary Tools](#%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7-auxiliary-tools)
 - [安全防护](#%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4)
 	- [内存马查杀](#%E5%86%85%E5%AD%98%E9%A9%AC%E6%9F%A5%E6%9D%80)
@@ -75,11 +74,12 @@
 	- [攻击研判](#%E6%94%BB%E5%87%BB%E7%A0%94%E5%88%A4)
 	- [基线加固](#%E5%9F%BA%E7%BA%BF%E5%8A%A0%E5%9B%BA)
 	- [勒索病毒](#%E5%8B%92%E7%B4%A2%E7%97%85%E6%AF%92)
+		- [搜索引擎](#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E)
+		- [解密工具](#%E8%A7%A3%E5%AF%86%E5%B7%A5%E5%85%B7)
 	- [逆向分析](#%E9%80%86%E5%90%91%E5%88%86%E6%9E%90)
 - [云安全](#%E4%BA%91%E5%AE%89%E5%85%A8)
 	- [云安全资源](#%E4%BA%91%E5%AE%89%E5%85%A8%E8%B5%84%E6%BA%90)
 	- [云安全矩阵](#%E4%BA%91%E5%AE%89%E5%85%A8%E7%9F%A9%E9%98%B5)
-	- [云上靶场](#%E4%BA%91%E4%B8%8A%E9%9D%B6%E5%9C%BA)
 	- [AK/SK](#aksk)
 - [虚拟化安全](#%E8%99%9A%E6%8B%9F%E5%8C%96%E5%AE%89%E5%85%A8)
 	- [容器](#%E5%AE%B9%E5%99%A8)
@@ -402,16 +402,19 @@ Flask_Session_Decryptor: Flask session注入解密
 
 #### 字典生成
 
-- 在线弱密码生成: https://weakpass.com/generate
-- 在线子域名生成: https://weakpass.com/generate/domains
-- Weakpass: 在线弱密码生成工具部署 https://github.com/zzzteph/weakpass
-- Weakpass: 在线子域名生成工具部署 https://github.com/zzzteph/probable_subdomains
-- pydictor: 一个强大实用的黑客暴力破解字典建立工具 https://github.com/LandGrey/pydictor/
-- 汉字转拼音: https://www.aies.cn/pinyin.htm
-- 密码猜解: https://www.hacked.com.cn/pass.html
-- crunch
-	- Kali/Linux: https://sourceforge.net/projects/crunch-wordlist
-	- Windows: https://github.com/shadwork/Windows-Crunch
+- Online:
+	- Generate wordlists: https://weakpass.com/generate
+	- Generate subdomains and wordlists: https://weakpass.com/generate/domains
+	- -汉字转拼音: https://www.aies.cn/pinyin.htm
+	- 密码猜解: https://www.hacked.com.cn/pass.html
+- Private Deployment:
+	- Generate wordlists(offline): https://github.com/zzzteph/weakpass
+	- Generate subdomains and wordlists(offline): https://github.com/zzzteph/probable_subdomains
+- Offline:
+	- pydictor: 一个强大实用的黑客暴力破解字典建立工具 https://github.com/LandGrey/pydictor/
+	- crunch:
+		- Kali/Linux: https://sourceforge.net/projects/crunch-wordlist
+		- Windows: https://github.com/shadwork/Windows-Crunch
 
 #### 默认口令查询
 
@@ -452,11 +455,7 @@ Flask_Session_Decryptor: Flask session注入解密
 ### 小程序/APP
 
 - 小蓝本: https://www.xiaolanben.com/
-- 七麦数据：https://www.qimai.cn/
-
-### 浏览器
-
-- HackBrowserData: 浏览器数据导出工具 https://github.com/moonD4rk/HackBrowserData
+- 七麦数据: https://www.qimai.cn/
 
 ### 综合工具
 
@@ -502,17 +501,28 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 漏洞复现
 
-- Vulhub: https://vulhub.org/
-- DVWA: https://github.com/digininja/DVWA
-- HackTheBox: https://www.hackthebox.com/
-- OWASP Top10: https://owasp.org/www-project-juice-shop/
-- WebGoat: https://github.com/WebGoat/WebGoat
-- Sqli-labs: SQL注入 https://github.com/Audi-1/sqli-labs
-- Xss-labs: XSS注入 https://github.com/do0dl3/xss-labs
-- Upload-labs: 上传漏洞 https://github.com/c0ny1/upload-labs
-- Vulstudy: docker快速搭建共17个漏洞靶场 https://github.com/c0ny1/vulstudy
-- Vulfocus: 漏洞集成平台 https://github.com/fofapro/vulfocus
-- IoT-vulhub: IoT 版固件漏洞复现环境 https://github.com/firmianay/IoT-vulhub
+- Web:
+	- Sqli-labs: https://github.com/Audi-1/sqli-labs
+	- Upload-labs: https://github.com/c0ny1/upload-labs
+	- Xss-labs: https://github.com/do0dl3/xss-labs
+	- DVWA: https://github.com/digininja/DVWA
+	- WebGoat: https://github.com/WebGoat/WebGoat
+- Comprehensive:
+	- Vulhub: https://vulhub.org/
+	- ichunqiu: https://yunjing.ichunqiu.com/
+	- HackTheBox: https://www.hackthebox.com/
+	- OWASP Top10: https://owasp.org/www-project-juice-shop/
+	- Vulstudy: 17 platform based on docker https://github.com/c0ny1/vulstudy
+	- Vulfocus: https://github.com/fofapro/vulfocus
+- IoT:
+	- IoT-vulhub: https://github.com/firmianay/IoT-vulhub
+- Cloud:
+	- Metarget: https://github.com/Metarget/metarget
+	- Attack Defense: https://attackdefense.pentesteracademy.com/listing?labtype=cloud-services&subtype=cloud-services-amazon-s3
+	- AWSGoat: https://github.com/ine-labs/AWSGoat
+	- TerraformGoat: https://github.com/HuoCorp/TerraformGoat
+	- Kubernetes Goat: https://github.com/madhuakula/kubernetes-goat
+	- CloudGoat: https://github.com/RhinoSecurityLabs/cloudgoat
 
 ### PoC库
 
@@ -672,10 +682,12 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### DNSLog
 
-- Ceye DNS: 在线Dnslog http://ceye.io/
-- Dnslog: 在线Dnslog http://dnslog.cn/
-- Fuzz.Red: 在线Dnslog https://github.com/AlphabugX/Alphalog
-- DNS重绑定: https://lock.cmpxchg8b.com/rebinder.html
+- Online:
+	- http://ceye.io/
+	- http://dnslog.cn/
+	- https://dig.pm/
+- Alphalog: dns/http/rmi/ldap https://github.com/AlphabugX/Alphalog
+- DNS rebinding: https://lock.cmpxchg8b.com/rebinder.html
 - DNSLog-GO: 自建私有平台 https://github.com/lanyi1998/DNSlog-GO
 
 ### Payload/Bypass
@@ -719,10 +731,6 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/byt3bl33d3r/CrackMapExec
 	- https://github.com/fortra/impacket
 	- https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
-- Tools for AD:
-	- https://github.com/SpecterOps/BloodHound
-	- https://github.com/BloodHoundAD/SharpHound
-	- https://github.com/lzzbb/Adinfo
 - netspy: 快速探测内网可达网段 https://github.com/shmilylty/netspy
 - LOLBAS: Windows二进制文件库 https://github.com/LOLBAS-Project/LOLBAS
 - GTFOBins: Unix二进制文件库 https://gtfobins.github.io/
@@ -790,8 +798,12 @@ Flask_Session_Decryptor: Flask session注入解密
 - dnscat2: dns tunnel https://github.com/iagox86/dnscat2
 - icmpsh: icmp tunnel https://github.com/bdamele/icmpsh
 
-### 域内漏洞 AD / Kerberos
+### 域渗透 AD / Kerberos
 
+- Tools for collection and discovery:
+	- https://github.com/SpecterOps/BloodHound
+	- https://github.com/BloodHoundAD/SharpHound
+	- https://github.com/lzzbb/Adinfo
 - noPac: CVE-2021-42278 / CVE-2021-42287 https://github.com/Ridter/noPac
 - PetitPotam: NTLM relay https://github.com/topotam/PetitPotam
 - Zerologon CVE-2020-1472:
@@ -799,6 +811,12 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/dirkjanm/CVE-2020-1472
 	- https://github.com/Potato-py/Potato/tree/03c3551e4770db440b27b0a48fc02b0a38a1cf04/exp/cve/CVE-2020-1472 reset password
 - kerbrute: https://github.com/ropnop/kerbrute
+- Active Directory Certificate Services(AD CS) enumeration and abuse：
+	- Certify: https://github.com/GhostPack/Certify
+	- Certipy: https://github.com/ly4k/Certipy
+	- certi: https://github.com/zer1t0/certi
+	- PKINITtools: https://github.com/dirkjanm/PKINITtools
+	- ADCSPwn: https://github.com/bats3c/ADCSPwn
 
 ### 辅助工具 Auxiliary Tools
 
@@ -888,15 +906,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - 火线安全-云服务攻防矩阵 https://cloudsec.huoxian.cn/
 - 腾讯云鼎实验室-云安全攻防矩阵 https://cloudsec.tencent.com/home/
 
-### 云上靶场
-
-- Metarget: https://github.com/Metarget/metarget
-- Attack Defense: 付费 https://attackdefense.pentesteracademy.com/listing?labtype=cloud-services&subtype=cloud-services-amazon-s3
-- AWSGoat: https://github.com/ine-labs/AWSGoat
-- TerraformGoat: 火线云环境攻防靶场 https://github.com/HuoCorp/TerraformGoat
-- Kubernetes Goat: https://github.com/madhuakula/kubernetes-goat
-- CloudGoat: https://github.com/RhinoSecurityLabs/cloudgoat
-
 ### AK/SK
 
 - CF: 云环境利用框架 https://github.com/teamssix/cf
@@ -929,6 +938,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - wxappUnpacker: 小程序解包 https://github.com/xuedingmiaojun/wxappUnpacker
 - CrackMinApp: 反编译微信小程序 https://github.com/Cherrison/CrackMinApp
+- API-Explorer: 公众号/小程序/企业微信 ak/sk https://github.com/mrknow001/API-Explorer
 
 ### APK
 
