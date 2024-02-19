@@ -142,6 +142,7 @@ Flask_Session_Decryptor: Flask session注入解密
 信息收集-敏感信息收集
 内网渗透-免杀
 内网渗透-隐藏
+内网渗透-Pentesting AD Mindmap
 安全架构-网络攻击与防御图谱
 平台搭建-DNS Log
 流量分析-CobaltStrike
@@ -268,6 +269,11 @@ Flask_Session_Decryptor: Flask session注入解密
 - Pentest Workflow: https://pentest.mxhx.org/
 - Pentest cheatsheet: https://pentestbook.six2dez.com/
 
+#### If you want to improve your English language skills
+
+- https://www.grammarly.com/grammar-check
+- https://ludwig.guru/
+
 ### 在线工具
 
 - 反弹Shell生成:
@@ -281,6 +287,9 @@ Flask_Session_Decryptor: Flask session注入解密
 - 接收手机验证码: https://www.supercloudsms.com/en/
 - 临时邮箱: http://24mail.chacuo.net/
 - 短链接生成: https://a.f8x.io/
+- SG TCP/IP 端口数据库: https://www.speedguide.net/ports.php
+- Programming/Toolkit/Command/OS/Shortcuts Cheatsheets:
+	- https://cheatsheets.zip/
 
 ## 信息收集
 
@@ -567,8 +576,11 @@ Flask_Session_Decryptor: Flask session注入解密
 - RedisStudio: Redis 未授权 https://github.com/cinience/RedisStudio
 - redis-rogue-server: Redis 未授权 https://github.com/n0b0dyCN/redis-rogue-server
 - redis-rce: Redis 未授权 https://github.com/Ridter/redis-rce
-- mysql-fake-server: MySQL JDBC 客户端 Java 反序列化漏洞利用 https://github.com/4ra1n/mysql-fake-server
 - MDUT: Multiple Database Utilization Tools https://github.com/SafeGroceryStore/MDUT
+- MySQL JDBC 反序列化：
+	- mysql-fake-server: https://github.com/4ra1n/mysql-fake-server
+	- evil-mysql-server: https://github.com/dushixiang/evil-mysql-server
+	- MySQL_Fake_Server: https://github.com/fnmsd/MySQL_Fake_Server
 
 ### 信息泄露
 
@@ -731,10 +743,13 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/byt3bl33d3r/CrackMapExec
 	- https://github.com/fortra/impacket
 	- https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
+	- https://github.com/GhostPack/Rubeus
 - netspy: 快速探测内网可达网段 https://github.com/shmilylty/netspy
 - LOLBAS: Windows二进制文件库 https://github.com/LOLBAS-Project/LOLBAS
 - GTFOBins: Unix二进制文件库 https://gtfobins.github.io/
-- Responder: https://github.com/SpiderLabs/Responder
+- Responder:
+	- https://github.com/lgandx/Responder
+	- https://github.com/lgandx/Responder-Windows
 
 ### 权限提升 Privilege Escalation
 
@@ -761,6 +776,9 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
 - Database Exploits:
 	- https://github.com/Hel10-Web/Databasetools
+- Exchange Exploits:
+	- https://github.com/dirkjanm/privexchange/
+	- https://github.com/Jumbo-WJB/PTH_Exchange
 
 ### 权限维持 Persistence
 
@@ -800,6 +818,8 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 域渗透 AD / Kerberos
 
+- AD attack&defense mindmaps:
+	- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 - Tools for collection and discovery:
 	- https://github.com/SpecterOps/BloodHound
 	- https://github.com/BloodHoundAD/SharpHound
@@ -811,6 +831,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/dirkjanm/CVE-2020-1472
 	- https://github.com/Potato-py/Potato/tree/03c3551e4770db440b27b0a48fc02b0a38a1cf04/exp/cve/CVE-2020-1472 reset password
 - kerbrute: https://github.com/ropnop/kerbrute
+- dcsync: https://github.com/n00py/DCSync
 - Active Directory Certificate Services(AD CS) enumeration and abuse：
 	- Certify: https://github.com/GhostPack/Certify
 	- Certipy: https://github.com/ly4k/Certipy
@@ -1024,18 +1045,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - PySimpleGUI: https://github.com/PySimpleGUI/PySimpleGUI
 - f8x: 红/蓝队环境自动化部署工具 https://github.com/ffffffff0x/f8x
 - cloudreve: 私有云盘部署 https://github.com/cloudreve/Cloudreve
-
-## 先mark待测试项目
-
-- changeme: https://github.com/ztgrace/changeme
-- RouterSploit: https://github.com/threat9/routersploit
-- JNDInjector: 高度可定制化的JNDI和Java反序列化利用工具 https://github.com/rebeyond/JNDInjector
-- IDOR_detect_tool: SaaS-API越权漏洞检测系统 https://github.com/y1nglamore/IDOR_detect_tool
-- AsamF: 集成多个网络资产测绘平台的一站式企业信息资产收集工具 https://github.com/Kento-Sec/AsamF
-- FastjsonScan: Fastjson扫描器，可识别版本、依赖库、autoType状态等 https://github.com/a1phaboy/FastjsonScan
-- OA-EXPTOOL: OA综合利用工具 https://github.com/LittleBear4/OA-EXPTOOL
-- SharpHostInfo: 快速探测内网主机信息工具 https://github.com/shmilylty/SharpHostInfo
-- QueryTools: 信息收集 IP/域名资产验证 https://github.com/z-bool/QueryTools
 
 ## 提高生产力的使用姿势
 
