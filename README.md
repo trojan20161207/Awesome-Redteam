@@ -263,11 +263,19 @@ Flask_Session_Decryptor: Flask session注入解密
 - Mitre ATT&CK:
 	- matics: https://attack.mitre.org/matrices/enterprise
 	- techniques: http://attack.mitre.org/techniques/enterprise/
-- Red teaming and offensive security: https://www.ired.team/
 - Convention material: https://infocon.org/
 - Evasion techniques: https://evasions.checkpoint.com/
 - Pentest Workflow: https://pentest.mxhx.org/
 - Pentest cheatsheet: https://pentestbook.six2dez.com/
+- Red teaming and offensive security:
+	- https://www.ired.team/
+	- https://www.thehacker.recipes/
+	- https://ppn.snovvcrash.rocks/
+	- https://book.hacktricks.xyz/
+	- https://blog.harmj0y.net/
+	- https://hausec.com/domain-penetration-testing/
+	- https://dirkjanm.io/
+	- https://casvancooten.com/
 
 #### If you want to improve your English language skills
 
@@ -771,6 +779,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/SecWiki/windows-kernel-exploits
 	- https://github.com/Al1ex/WindowsElevation
 	- https://i.hacking8.com/tiquan/ online
+	- https://github.com/BeichenDream/BadPotato/
 - Linux Exploits:
 	- https://github.com/The-Z-Labs/linux-exploit-suggester
 	- https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
