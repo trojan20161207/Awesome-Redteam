@@ -829,10 +829,13 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - AD attack&defense mindmaps:
 	- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
-- Tools for collection and discovery:
+- Tools for **collection and discovery**:
 	- https://github.com/SpecterOps/BloodHound
 	- https://github.com/BloodHoundAD/SharpHound
 	- https://github.com/lzzbb/Adinfo
+- Tools for **collection and discovery via Active Directory Web Services (ADWS) protocol**:
+	- https://github.com/wh0amitz/SharpADWS via Active Directory Web Services (ADWS) protocol
+	- https://github.com/FalconForceTeam/SOAPHound via Active Directory Web Services (ADWS) protocol
 - noPac: CVE-2021-42278 / CVE-2021-42287 https://github.com/Ridter/noPac
 - PetitPotam: NTLM relay https://github.com/topotam/PetitPotam
 - Zerologon CVE-2020-1472:
@@ -847,6 +850,8 @@ Flask_Session_Decryptor: Flask session注入解密
 	- certi: https://github.com/zer1t0/certi
 	- PKINITtools: https://github.com/dirkjanm/PKINITtools
 	- ADCSPwn: https://github.com/bats3c/ADCSPwn
+- Game of active directory：
+	- https://github.com/Orange-Cyberdefense/GOAD
 
 ### 辅助工具 Auxiliary Tools
 
