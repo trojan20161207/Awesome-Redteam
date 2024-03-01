@@ -4,7 +4,7 @@
 
 ## Roadmap
 
-![](images/README/Awesome-Redteam-20240105.png)
+![](images/README/Awesome-Redteam-20240301.png)
 
 ## 目录
 
@@ -19,7 +19,6 @@
 	- [网络空间搜索](#%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2)
 	- [OSINT](#osint)
 	- [公开知识库](#%E5%85%AC%E5%BC%80%E7%9F%A5%E8%AF%86%E5%BA%93)
-		- [Only available in English](#only-available-in-english)
 	- [在线工具](#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7)
 - [信息收集](#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86)
 	- [IP/域名/子域名](#ip%E5%9F%9F%E5%90%8D%E5%AD%90%E5%9F%9F%E5%90%8D)
@@ -99,7 +98,6 @@
 	- [Burpsuite](#burpsuite)
 	- [Chrome](#chrome)
 - [其他优秀项目](#%E5%85%B6%E4%BB%96%E4%BC%98%E7%A7%80%E9%A1%B9%E7%9B%AE)
-- [先mark待测试项目](#%E5%85%88mark%E5%BE%85%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE)
 - [提高生产力的使用姿势](#%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%E7%9A%84%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF)
 	- [如何通过.bat使用alias](#%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87bat%E4%BD%BF%E7%94%A8alias)
 	- [如何通过.bat激活conda并运行py](#%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87bat%E6%BF%80%E6%B4%BBconda%E5%B9%B6%E8%BF%90%E8%A1%8Cpy)
@@ -574,6 +572,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - JYso: jndi注入 反溯源 https://github.com/qi4L/JYso
 - JNDI-Injection-Exploit: https://github.com/welk1n/JNDI-Injection-Exploit
 - JNDIExploit: 功能更强 冰蝎内存马 https://github.com/WhiteHSBG/JNDIExploit
+- JNDInjector: 一个高度可定制化的JNDI和Java反序列化利用工具 https://github.com/rebeyond/JNDInjector
 
 ### 代码审计
 
@@ -589,6 +588,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- mysql-fake-server: https://github.com/4ra1n/mysql-fake-server
 	- evil-mysql-server: https://github.com/dushixiang/evil-mysql-server
 	- MySQL_Fake_Server: https://github.com/fnmsd/MySQL_Fake_Server
+- odat: Oracle RCE https://github.com/quentinhardy/odat
 
 ### 信息泄露
 
@@ -680,7 +680,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 #### WebSocket
 
-- -wscat: https://github.com/websockets/wscat
+- wscat: https://github.com/websockets/wscat
 
 #### vSphere
 
@@ -731,6 +731,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- LaZagne: https://github.com/AlessandroZ/LaZagne
 	- WirelessKeyView: https://www.nirsoft.net/utils/wireless_key.html
 	- Windows credential manager: https://www.nirsoft.net/utils/credentials_file_view.html
+	- Pillager: https://github.com/qwqdanchun/Pillager/
 - Local Enumeration:
 	- HackBrowserData: https://github.com/moonD4rk/HackBrowserData
 	- BrowserGhost: https://github.com/QAX-A-Team/BrowserGhost
@@ -751,7 +752,6 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/byt3bl33d3r/CrackMapExec
 	- https://github.com/fortra/impacket
 	- https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
-	- https://github.com/GhostPack/Rubeus
 - netspy: 快速探测内网可达网段 https://github.com/shmilylty/netspy
 - LOLBAS: Windows二进制文件库 https://github.com/LOLBAS-Project/LOLBAS
 - GTFOBins: Unix二进制文件库 https://gtfobins.github.io/
@@ -780,24 +780,27 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/Al1ex/WindowsElevation
 	- https://i.hacking8.com/tiquan/ online
 	- https://github.com/BeichenDream/BadPotato/
+	- https://github.com/giuliano108/SeBackupPrivilege
 - Linux Exploits:
 	- https://github.com/The-Z-Labs/linux-exploit-suggester
 	- https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
 - Database Exploits:
 	- https://github.com/Hel10-Web/Databasetools
-- Exchange Exploits:
-	- https://github.com/dirkjanm/privexchange/
-	- https://github.com/Jumbo-WJB/PTH_Exchange
 
 ### 权限维持 Persistence
 
-- Webshell收集项目: https://github.com/tennc/webshell
-- TomcatMemShell: https://github.com/ce-automne/TomcatMemShell
-- wsMemShell: websocket memshell https://github.com/veo/wsMemShell
-- RMI_Inj_MemShell: LDAP无效时的RMI内存马 配合wscat使用 https://github.com/novysodope/RMI_Inj_MemShell
-- Behinder: https://github.com/rebeyond/Behinder
-- Godzilla: https://github.com/BeichenDream/Godzilla
-- Skyscorpion: https://github.com/shack2/skyscorpion
+- Webshell Collection：
+	- https://github.com/tennc/webshell
+	- https://github.com/novysodope/RMI_Inj_MemShell
+	- https://github.com/ce-automne/TomcatMemShell
+	- https://github.com/veo/wsMemShell
+- Webshell Management：
+	- https://github.com/rebeyond/Behinder
+	- https://github.com/BeichenDream/Godzilla
+	- https://github.com/shack2/skyscorpion
+- Reverse Shell Management：
+	- https://github.com/WangYihang/Platypus
+	- https://github.com/calebstewart/pwncat python 3.9+
 
 ### 免杀项目 Defense Evasion
 
@@ -827,31 +830,42 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 域渗透 AD / Kerberos
 
-- AD attack&defense mindmaps:
-	- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
-- Tools for **collection and discovery**:
+- NICE TOOLS:
+	- https://github.com/GhostPack/Rubeus
+- AD resources:
+	- AD attack&defense mindmaps: https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
+	- Game of active directory: https://github.com/Orange-Cyberdefense/GOAD
+- AD collection and discovery:
 	- https://github.com/SpecterOps/BloodHound
 	- https://github.com/BloodHoundAD/SharpHound
 	- https://github.com/lzzbb/Adinfo
-- Tools for **collection and discovery via Active Directory Web Services (ADWS) protocol**:
 	- https://github.com/wh0amitz/SharpADWS via Active Directory Web Services (ADWS) protocol
 	- https://github.com/FalconForceTeam/SOAPHound via Active Directory Web Services (ADWS) protocol
-- noPac: CVE-2021-42278 / CVE-2021-42287 https://github.com/Ridter/noPac
-- PetitPotam: NTLM relay https://github.com/topotam/PetitPotam
-- Zerologon CVE-2020-1472:
-	- https://github.com/XiaoliChan/zerologon-Shot
-	- https://github.com/dirkjanm/CVE-2020-1472
-	- https://github.com/Potato-py/Potato/tree/03c3551e4770db440b27b0a48fc02b0a38a1cf04/exp/cve/CVE-2020-1472 reset password
-- kerbrute: https://github.com/ropnop/kerbrute
-- dcsync: https://github.com/n00py/DCSync
+- Known Vulnerabilities:
+	- noPac: CVE-2021-42278 / CVE-2021-42287 https://github.com/Ridter/noPac
+	- Zerologon CVE-2020-1472:
+		- https://github.com/XiaoliChan/zerologon-Shot
+		- https://github.com/dirkjanm/CVE-2020-1472
+		- https://github.com/Potato-py/Potato/tree/03c3551e4770db440b27b0a48fc02b0a38a1cf04/exp/cve/CVE-2020-1472 reset password
+	- Exchange ProxyLogon & ProxyShell:
+		- https://github.com/dirkjanm/privexchange/
+		- https://github.com/Jumbo-WJB/PTH_Exchange
+		- https://github.com/hausec/ProxyLogon
 - Active Directory Certificate Services(AD CS) enumeration and abuse：
 	- Certify: https://github.com/GhostPack/Certify
 	- Certipy: https://github.com/ly4k/Certipy
 	- certi: https://github.com/zer1t0/certi
 	- PKINITtools: https://github.com/dirkjanm/PKINITtools
 	- ADCSPwn: https://github.com/bats3c/ADCSPwn
-- Game of active directory：
-	- https://github.com/Orange-Cyberdefense/GOAD
+- kerbrute: https://github.com/ropnop/kerbrute
+- DCSync: https://github.com/n00py/DCSync
+- Coerce & NTLM relay:
+	- PetitPotam: https://github.com/topotam/PetitPotam
+	- PrinterBug: https://github.com/leechristensen/SpoolSample
+	- DFSCoerce: https://github.com/Wh04m1001/DFSCoerce
+	- ShadowCoerce: https://github.com/ShutdownRepo/ShadowCoerce
+	- PrivExchange: https://github.com/dirkjanm/privexchange/
+	- Coercer: https://github.com/p0dalirius/Coercer
 
 ### 辅助工具 Auxiliary Tools
 
@@ -1006,7 +1020,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - clink: cmd.exe 加强版补全、历史记录和行编辑 https://github.com/chrisant996/clink
 - tabby: 高度可配置终端 https://github.com/Eugeny/tabby
 - anew: 命令行工具 文件合并去重 https://github.com/tomnomnom/anew
-- Platypus: 反弹shell管理 https://github.com/WangYihang/Platypus
 - The art of command line: 快速掌握命令行 https://github.com/jlevy/the-art-of-command-line
 - Linux命令行提示工具:
 	- https://github.com/jaywcjlove/linux-command online版
