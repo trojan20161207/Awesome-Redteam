@@ -153,7 +153,7 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 编解码/加解密综合
 
-- 在线工具：
+- 在线工具:
 	- http://www.ip33.com/
 	- https://evilcos.me/lab/xssee/
 	- http://www.metools.info/
@@ -163,7 +163,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- http://www.atoolbox.net/
 	- https://www.sojson.com/
 	- https://the-x.cn/
-- 离线工具：
+- 离线工具:
 	- Ciphey: https://github.com/Ciphey/Ciphey python
 	- CyberChef: https://github.com/gchq/CyberChef web
 	- ctfcode: http://1o1o.xyz/bo_ctfcode.html
@@ -243,6 +243,10 @@ Flask_Session_Decryptor: Flask session注入解密
 - Source code Search Engine:
 	- https://publicwww.com/
 	- https://searchcode.com/
+- RSS Feeds:
+	- https://github.com/zer0yu/CyberSecurityRSS
+	- https://github.com/zhengjim/Chinese-Security-RSS
+	- https://wechat2rss.xlab.app/posts/list/
 
 ### 公开知识库
 
@@ -492,26 +496,26 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 开源资源
 
-- 国内信息披露平台：
+- 国内信息披露平台:
 	- https://www.cnnvd.org.cn/
 	- https://www.cert.org.cn/
 	- https://www.scap.org.cn/
 	- https://www.seebug.org/
 	- https://stack.chaitin.com/vuldb/
 	- https://avd.aliyun.com/high-risk/list
-- 国外信息披露平台：
+- 国外信息披露平台:
 	- https://cve.mitre.org/
 	- https://nvd.nist.gov/
 	- https://www.rapid7.com/db/
 	- https://packetstormsecurity.com/files/tags/exploit
 	- https://github.com/trickest/cve
-- Exploits搜索引擎：
+- Exploits搜索引擎:
 	- https://sploitus.com/
 	- https://www.exploit-db.com/ kali中可以配合命令 `searchsploit <keywords>` 使用
-- 漏洞文库：
+- 漏洞文库:
 	- http://wooyun.2xss.cc/ Wooyun镜像
 	- https://peiqi.wgpsec.org/
-- Bug Bounty：
+- Bug Bounty:
 	- HackerOne: https://www.hackerone.com/
 
 ### 漏洞复现
@@ -584,7 +588,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - redis-rogue-server: Redis 未授权 https://github.com/n0b0dyCN/redis-rogue-server
 - redis-rce: Redis 未授权 https://github.com/Ridter/redis-rce
 - MDUT: Multiple Database Utilization Tools https://github.com/SafeGroceryStore/MDUT
-- MySQL JDBC 反序列化：
+- MySQL JDBC 反序列化:
 	- mysql-fake-server: https://github.com/4ra1n/mysql-fake-server
 	- evil-mysql-server: https://github.com/dushixiang/evil-mysql-server
 	- MySQL_Fake_Server: https://github.com/fnmsd/MySQL_Fake_Server
@@ -781,6 +785,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://i.hacking8.com/tiquan/ online
 	- https://github.com/BeichenDream/BadPotato/
 	- https://github.com/giuliano108/SeBackupPrivilege
+	- https://github.com/gtworek/PSBits/blob/master/Misc/EnableSeBackupPrivilege.ps1
 - Linux Exploits:
 	- https://github.com/The-Z-Labs/linux-exploit-suggester
 	- https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
@@ -789,16 +794,16 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 权限维持 Persistence
 
-- Webshell Collection：
+- Webshell Collection:
 	- https://github.com/tennc/webshell
 	- https://github.com/novysodope/RMI_Inj_MemShell
 	- https://github.com/ce-automne/TomcatMemShell
 	- https://github.com/veo/wsMemShell
-- Webshell Management：
+- Webshell Management:
 	- https://github.com/rebeyond/Behinder
 	- https://github.com/BeichenDream/Godzilla
 	- https://github.com/shack2/skyscorpion
-- Reverse Shell Management：
+- Reverse Shell Management:
 	- https://github.com/WangYihang/Platypus
 	- https://github.com/calebstewart/pwncat python 3.9+
 
@@ -851,7 +856,7 @@ Flask_Session_Decryptor: Flask session注入解密
 		- https://github.com/dirkjanm/privexchange/
 		- https://github.com/Jumbo-WJB/PTH_Exchange
 		- https://github.com/hausec/ProxyLogon
-- Active Directory Certificate Services(AD CS) enumeration and abuse：
+- Active Directory Certificate Services(AD CS) enumeration and abuse:
 	- Certify: https://github.com/GhostPack/Certify
 	- Certipy: https://github.com/ly4k/Certipy
 	- certi: https://github.com/zer1t0/certi
@@ -926,14 +931,34 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### 逆向分析
 
-- OpenArk: Anti-Rootkit（对抗恶意程序）工具集 https://github.com/BlackINT3/OpenArk
-- 逆向分析工具集: https://pythonarsenal.com/
-- jadx: https://github.com/skylot/jadx
-- JEB: https://www.pnfsoftware.com/
-- GDA: https://github.com/charles2gan/GDA-android-reversing-Tool
-- PEiD: 查壳工具 https://www.aldeid.com/wiki/PEiD
-- Py2exe: Python打包工具 https://www.py2exe.org/
-- PyInstaller: Python打包工具 https://github.com/pyinstaller/pyinstaller
+- NICE TOOLS:
+	- OpenArk: Anti-Rootkit 工具集 https://github.com/BlackINT3/OpenArk
+	- 逆向分析工具集: https://pythonarsenal.com/
+- ELF/EXE:
+	- IDA: https://hex-rays.com/ida-pro/
+	- x64DBG: https://x64dbg.com/
+	- Ollydbg: https://www.ollydbg.de/
+	- ExeinfoPE: https://github.com/ExeinfoASL/ASL
+	- PEiD: https://www.aldeid.com/wiki/PEiD
+	- UPX: https://github.com/upx/upx
+- Java:
+	- jadx: https://github.com/skylot/jadx
+	- JEB: https://www.pnfsoftware.com/
+	- GDA: https://github.com/charles2gan/GDA-android-reversing-Tool
+- Python:
+	- Py2exe: Python打包工具 https://www.py2exe.org/
+	- PyInstaller: Python打包工具 https://github.com/pyinstaller/pyinstaller
+	- unpy2exe: py2exe 打包程序中提取 .pyc https://github.com/matiasb/unpy2exe
+	- pyinstxtractor: pyInstaller 打包程序中提取 .pyc https://github.com/extremecoders-re/pyinstxtractor
+	- uncompyle6: 字节码文件（.pyc）反编译为源代码（.py） https://github.com/rocky/python-uncompyle6/
+- Rust:
+	- https://github.com/cha5126568/rust-reversing-helper
+- Go:
+	- golang_loader_assist: https://github.com/strazzere/golang_loader_assist
+	- IDAGolangHelper: https://github.com/sibears/IDAGolangHelper
+- .NET:
+	- dotPeek: https://www.jetbrains.com/zh-cn/decompiler/
+	- dnSpy: https://github.com/dnSpy/dnSpy
 
 ## 云安全
 
