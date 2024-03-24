@@ -248,6 +248,9 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://dirkjanm.io/
 	- https://casvancooten.com/
 	- https://evasions.checkpoint.com/
+	- https://redteam.guide/docs/definitions
+- Blue Teaming and Defensive Security:
+	- https://github.com/Purp1eW0lf/Blue-Team-Notes
 - OPSEC:
 	- https://github.com/WesleyWong420/OPSEC-Tradecraft
 
@@ -581,10 +584,10 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### _CMS/OA_
 
-- CMS-Hunter: CMS漏洞测试用例集合 https://github.com/SecWiki/CMS-Hunter
-- 若依CMS https://github.com/thelostworldFree/Ruoyi-All
 - 通达OA: https://github.com/Fu5r0dah/TongdaScan_go
 - MYExploit: https://github.com/achuna33/MYExploit
+- Apt_t00ls: https://github.com/White-hua/Apt_t00ls
+- OA-EXPTOOL: https://github.com/LittleBear4/OA-EXPTOOL
 
 ### 中间件/应用层 _Middleware/Application_
 
@@ -620,9 +623,10 @@ Flask_Session_Decryptor: Flask session注入解密
 	- SpringBootVulExploit: https://github.com/LandGrey/SpringBootVulExploit
 	- Spring-cloud-function-SpEL-RCE: CVE-2022-22963 https://github.com/mamba-2021/EXP-POC/tree/main/Spring-cloud-function-SpEL-RCE
 	- swagger-exp: Swagger REST API 信息泄露利用工具 https://github.com/lijiejie/swagger-exp
+- Heapdump:
 	- heapdump_tool: heapdump敏感信息查询工具 https://github.com/wyzxxz/heapdump_tool
-	- JDumpSpider: HeapDump敏感信息提取工具 https://github.com/whwlsfb/JDumpSpider
 	- Memory Analyzer: HeapDump分析工具 https://www.eclipse.org/mat/previousReleases.php
+	- JDumpSpider: HeapDump敏感信息提取工具 https://github.com/whwlsfb/JDumpSpider
 - Tomcat:
 	- CVE-2020-1938: https://github.com/YDHCUI/CNVD-2020-10487-Tomcat-Ajp-lfi
 	- ClassHound: https://github.com/LandGrey/ClassHound
@@ -632,6 +636,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - Weblogic:
 	- WeblogicTool: https://github.com/KimJun1010/WeblogicTool
 	- WeblogicScan: https://github.com/dr0op/WeblogicScan
+	- WeblogicScan: https://github.com/rabbitmask/WeblogicScan
 	- weblogicScanner: https://github.com/0xn0ne/weblogicScanner
 	- weblogic-framework: https://github.com/sv3nbeast/weblogic-framework
 - WebSocket:
@@ -661,6 +666,9 @@ Flask_Session_Decryptor: Flask session注入解密
 	- XSS Chop: https://xsschop.chaitin.cn/demo/
 	- XSS/CSRF编码转换: https://evilcos.me/lab/xssor/
 	- HTML5 Security Cheatsheet: XSS攻击向量学习/参考 https://html5sec.org/
+- Local File Inclusion:
+	- https://github.com/hansmach1ne/lfimap
+	- https://github.com/mzfr/liffy
 
 ### _DNSLog_
 
@@ -674,9 +682,11 @@ Flask_Session_Decryptor: Flask session注入解密
 
 ### _Payload and Bypass_
 
-- 403bypasser: https://github.com/yunemse48/403bypasser
-- byp4xx: https://github.com/lobuhi/byp4xx
-- 4-ZERO-3: 403/401绕过 https://github.com/Dheerajmadhukar/4-ZERO-3
+- Bypass HTTP 40X errors:
+	- https://github.com/yunemse48/403bypasser
+	- https://github.com/lobuhi/byp4xx
+	- https://github.com/Dheerajmadhukar/4-ZERO-3
+	- https://github.com/devploit/nomore403
 - PayloadsAllTheThings: https://github.com/swisskyrepo/PayloadsAllTheThings
 - java.lang.Runtime.exec() Payload: java Payload在线生成 https://www.bugku.net/runtime-exec-payloads/
 - PHP Generic Gadget Chains: PHP反序列化Payload https://github.com/ambionics/phpggc
@@ -694,6 +704,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- WirelessKeyView: https://www.nirsoft.net/utils/wireless_key.html
 	- Windows credential manager: https://www.nirsoft.net/utils/credentials_file_view.html
 	- Pillager: https://github.com/qwqdanchun/Pillager/
+	- searchall: https://github.com/Naturehi666/searchall
 - Local Enumeration:
 	- HackBrowserData: https://github.com/moonD4rk/HackBrowserData
 	- BrowserGhost: https://github.com/QAX-A-Team/BrowserGhost
@@ -716,6 +727,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/rapid7/metasploit-framework
 	- https://github.com/byt3bl33d3r/CrackMapExec
 	- https://github.com/fortra/impacket
+	- https://github.com/XiaoliChan/wmiexec-Pro
 	- https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 	- https://github.com/GhostPack/Rubeus
 	- https://github.com/Kevin-Robertson/Powermad
@@ -733,6 +745,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 	- https://github.com/mostaphabahadou/postenum
 	- https://github.com/rebootuser/LinEnum
+	- https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 	- https://github.com/DominicBreuker/pspy
 - Windows Local Enumeration:
 	- https://github.com/S3cur3Th1sSh1t/WinPwn
@@ -767,6 +780,9 @@ Flask_Session_Decryptor: Flask session注入解密
 	- https://github.com/rebeyond/Behinder
 	- https://github.com/BeichenDream/Godzilla
 	- https://github.com/shack2/skyscorpion
+- Webshell Bypass:
+	- https://github.com/AabyssZG/WebShell-Bypass-Guide
+	- http://bypass.tidesec.com/web/
 - Reverse Shell Management:
 	- https://github.com/WangYihang/Platypus
 	- https://github.com/calebstewart/pwncat python 3.9+
@@ -780,7 +796,6 @@ Flask_Session_Decryptor: Flask session注入解密
 - shellcodeloader: Windows平台的shellcode免杀加载器 https://github.com/knownsec/shellcodeloader
 - 杀软比对1: tasklist/systeminfo https://www.shentoushi.top/av/av.php
 - 杀软比对2: tasklist /svc && ps -aux https://tasklist.ffffffff0x.com/
-- 在线免杀: 免杀方式为原生webshell随机字符修改、Java反射、垃圾字符填充、函数名称变形 http://bypass.tidesec.com/web/
 
 ### 内网穿透 _Proxy_
 
@@ -795,6 +810,7 @@ Flask_Session_Decryptor: Flask session注入解密
 - Proxychains: tools for kali https://github.com/haad/proxychains
 - iodine: dns tunnel https://github.com/yarrick/iodine
 - dnscat2: dns tunnel https://github.com/iagox86/dnscat2
+- DNS-Shell: dns tunnel https://github.com/sensepost/DNS-Shell
 - icmpsh: icmp tunnel https://github.com/bdamele/icmpsh
 
 ### 辅助工具 _Auxiliary Tools_
@@ -815,14 +831,19 @@ Flask_Session_Decryptor: Flask session注入解密
 
 - AD attack&defense mindmaps: https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 - Game of active directory: https://github.com/Orange-Cyberdefense/GOAD
+- Windows/AD cheatsheet: https://wadcoms.github.io/
 
 ### 域内信息收集 Collection and Discovery
 
-- https://github.com/SpecterOps/BloodHound
-- https://github.com/BloodHoundAD/SharpHound
+- BloodHound:
+	- https://github.com/SpecterOps/BloodHound
+	- https://github.com/dirkjanm/BloodHound.py
+	- https://github.com/BloodHoundAD/SharpHound
+	- https://github.com/CompassSecurity/BloodHoundQueries
 - https://github.com/lzzbb/Adinfo
 - https://github.com/wh0amitz/SharpADWS via Active Directory Web Services (ADWS) protocol
 - https://github.com/FalconForceTeam/SOAPHound via Active Directory Web Services (ADWS) protocol
+- https://github.com/shmilylty/SharpHostInfo
 
 ### 域内已知漏洞 _Known Vulnerabilities_
 
@@ -862,6 +883,7 @@ Flask_Session_Decryptor: Flask session注入解密
 	- certi: https://github.com/zer1t0/certi
 	- PKINITtools: https://github.com/dirkjanm/PKINITtools
 	- ADCSPwn: https://github.com/bats3c/ADCSPwn
+- PassTheCert: https://github.com/AlmondOffSec/PassTheCert
 
 ## 安全防护 _Defensive Security_
 
